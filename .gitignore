@@ -1,0 +1,67 @@
+# Laravel / PHP specific
+/vendor/
+/node_modules/
+/.env
+/.env.*
+!.env.example
+storage/
+*.log
+*.sqlite
+*.sqlite-journal
+bootstrap/cache/
+public/storage/
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+.env.testing
+.php_cs.cache
+
+# Composer
+composer.phar
+composer.lock   # optional – keep if you want exact versions
+
+# IDE / OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large binary files (HR documents, images, PDFs – adjust as needed)
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.mp4
+*.avi
+*.mov
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Backup / temp files
+*.bak
+*.tmp
+*.cache
+*.old
+
+# Project specific
+/.phpunit
+/.npm
+/.yarn
+/.docker
+/.phan
+/.github/workflows/cache

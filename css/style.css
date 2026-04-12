@@ -1,0 +1,7 @@
+
+font-face {
+    font-family: 'sadad';
+    src: url('<?php echo base_url();?>/fonts/sadad.eot') format('embedded-opentype'), url('<?php echo base_url();?>/fonts/sadad.woff2') format('woff2'), url('<?php echo base_url();?>/fonts/sadad.woff') format('woff'), url('<?php echo base_url();?>/fonts/sadad.ttf') format('truetype'), url('<?php echo base_url();?>/fonts/sadad.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}

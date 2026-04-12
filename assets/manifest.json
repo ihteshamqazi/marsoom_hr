@@ -1,0 +1,26 @@
+{
+  "name": "تطبيق مرسوم للموارد البشريه",
+  "short_name": "مرسوم",
+  "start_url": "/hr/index.php/users2/pwa_launch",
+  "display": "fullscreen",
+  "background_color": "#001f3f",
+  "theme_color": "#001f3f",
+  "orientation": "portrait-primary",
+  "scope": "/hr/",
+  "categories": ["business", "productivity"],
+  "description": "تطبيق مرسوم لإدارة الموارد البشرية",
+  "icons": [
+    {
+      "src": "/hr/assets/logo1.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/hr/assets/logo1.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

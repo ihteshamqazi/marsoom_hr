@@ -9204,7 +9204,9 @@ public function reparations101() {
     $data['salary_sheets'] = $this->hr_model->get_salary_salary_sheet();
     // --- END NEW ---
  
-    $this->load->view('templateo/reparations101', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/reparations101', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
     public function salary_sheet() {
@@ -9216,7 +9218,9 @@ public function reparations101() {
     $data['get_salary_vacations'] = $this->hr_model->get_salary_salary_sheet();
        
  
-        $this->load->view('templateo/salary_sheet', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/salary_sheet', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
     
@@ -9233,7 +9237,9 @@ public function reparations101() {
     $data['get_salary_vacations'] = $this->hr_model->get_emp1();
        
  
-        $this->load->view('templateo/emp_data', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/emp_data', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
      // In Users1.php
@@ -9261,7 +9267,9 @@ public function reparations101() {
         $data['csrf_hash'] = $this->security->get_csrf_hash();
         // --- END NEW ---
         
-        $this->load->view('templateo/work_restrictions', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/work_restrictions', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
     /**
@@ -9454,7 +9462,9 @@ public function fetch_employees()
     $data['get_salary_vacations'] = $this->hr_model->get_emp1();
        
  
-        $this->load->view('templateo/models_emp', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/models_emp', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
     public function residents() {
@@ -9466,7 +9476,9 @@ public function fetch_employees()
     $data['get_salary_vacations'] = $this->hr_model->get_emp_residents();
        
  
-        $this->load->view('templateo/residents', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/residents', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
 
@@ -9500,7 +9512,9 @@ public function orders_emp()
     $data['current_user_id'] = $logged_in_user_id;
 
      
-     $this->load->view('templateo/orders_emp', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/orders_emp', $data ?? []);
+    $this->load->view('template/new_footer');
      
  }
 // In Users1.php
@@ -9708,7 +9722,9 @@ public function duplicate_punches_report() {
         'dup_stats' => $dup_stats
     ];
 
-    $this->load->view('templateo/duplicate_punches_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/duplicate_punches_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 public function delete_duplicate_logs() {
     if (!$this->session->userdata('logged_in')) return;
@@ -10231,7 +10247,9 @@ public function my_clearance_tasks() {
     $approverId = $this->session->userdata('username');
 
     $data['tasks'] = $this->hr_model->get_pending_clearances_for_user($approverId);
-    $this->load->view('templateo/clearance_tasks_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/clearance_tasks_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 public function submit_clearance_decision() {
@@ -10291,7 +10309,9 @@ public function orders_emp_res() {
 
        
  
-        $this->load->view('templateo/orders_emp_res', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/orders_emp_res', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
 
@@ -10617,7 +10637,9 @@ public function create_letter($letter_slug, $employee_id, $order_id)
     // Check if letter already exists
     $data['existing_letter'] = $this->hr_model->get_letter_data($order_id, $letter_slug);
 
-    $this->load->view('templateo/letter_form', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/letter_form', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 // Function to save letter data
@@ -10674,7 +10696,9 @@ public function generate_letter_print($order_id, $letter_slug)
         'letter_slug' => $letter_slug
     ];
 
-    $this->load->view('templateo/letter_print', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/letter_print', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 public function get_order_log()
 {
@@ -10819,7 +10843,9 @@ public function attendance_overview()
     $data['filters'] = $filters;
     $data['page_title'] = 'تقرير الحضور الشامل';
 
-    $this->load->view('templateo/hr_attendance_overview', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/hr_attendance_overview', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 // In application/controllers/Users1.php
 
@@ -11079,7 +11105,9 @@ public function attendance_report() {
     // --- CHANGE: Use 'address' to fetch the unique locations ---
     $data['locations'] = $this->hr_model->get_distinct_employees_field('address'); 
     
-    $this->load->view('templateo/attendance_report_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/attendance_report_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 public function attendance_report_json()
@@ -11290,7 +11318,9 @@ public function orders_emp_app()
     $data['my_department'] = $current_user_info['department'] ?? ''; 
     $data['current_user_id'] = $approver_id;
 
-    $this->load->view('templateo/orders_emp_app', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/orders_emp_app', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 // In Users1.php, REPLACE the eos_approvals function
@@ -11305,7 +11335,9 @@ public function eos_approvals()
     $user_id = $this->session->userdata('username');
     $data['all_eos_tasks'] = $this->hr_model->get_all_eos_tasks_for_user($user_id);
 
-    $this->load->view('templateo/eos_approvals_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/eos_approvals_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 public function update_order_status()
     {
@@ -11448,7 +11480,9 @@ public function add_employee()
 
     $data['page_title'] = 'إضافة موظف جديد';
     $data['employee'] = null; // No employee data for add mode
-    $this->load->view('templateo/employee_form_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/employee_form_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 public function edit_employee($id)
@@ -11464,7 +11498,9 @@ public function edit_employee($id)
     }
 
     $data['page_title'] = 'تعديل بيانات الموظف';
-    $this->load->view('templateo/employee_form_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/employee_form_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 // In controllers/Users1.php
@@ -11525,7 +11561,9 @@ public function org_structure_management()
     $data['structures'] = $this->hr_model->get_all_org_structures();
     
     // Load the new list view we will create
-    $this->load->view('templateo/org_structure_list_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/org_structure_list_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 public function edit_org_structure($id = 0)
@@ -11548,7 +11586,9 @@ public function edit_org_structure($id = 0)
     }
     
     // Load the new form view we will create
-    $this->load->view('templateo/org_structure_form_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/org_structure_form_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 public function save_org_structure()

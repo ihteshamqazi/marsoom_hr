@@ -2154,7 +2154,9 @@ public function public_holidays()
     $data['holidays'] = $this->hr_model->get_all_holidays();
     
     // Load a new view file we will create next
-    $this->load->view('templateo/public_holidays_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/public_holidays_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 // Handles the form submission for adding a new holiday
@@ -2447,7 +2449,9 @@ public function task_manager_dashboard()
     $data['csrf_token_name'] = $this->security->get_csrf_token_name();
     $data['csrf_hash'] = $this->security->get_csrf_hash();
 
-    $this->load->view('templateo/task_manager_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/task_manager_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 public function ajax_create_task()
@@ -2485,7 +2489,9 @@ public function my_tasks_dashboard()
     $data['csrf_token_name'] = $this->security->get_csrf_token_name();
     $data['csrf_hash'] = $this->security->get_csrf_hash();
 
-    $this->load->view('templateo/my_tasks_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/my_tasks_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 // In application/controllers/Users1.php
 
@@ -2794,7 +2800,9 @@ public function team_balances_dashboard()
     // 2. Fetch Data
     $data['team_balances'] = $this->hr_model->get_balances_for_list(array_unique($target_ids));
     
-    $this->load->view('templateo/team_balances_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/team_balances_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 public function leave_capacity_dashboard()
 {
@@ -2815,7 +2823,9 @@ public function leave_capacity_dashboard()
         $data['dept_stats'] = $this->hr_model->get_subordinate_leave_stats($manager_id, 25);
     }
     
-    $this->load->view('templateo/leave_capacity_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/leave_capacity_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 public function ajax_update_task_status()
 {
@@ -2991,7 +3001,9 @@ $data['ot_estimated_amount'] = 0;
             $data['delegate_name'] = $data['request']['delegation_employee_id']; 
         }
     }
-    $this->load->view('templateo/view_request_details', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/view_request_details', $data ?? []);
+$this->load->view('template/new_footer');
 }
     function index1(){ 
         if(!$this ->session->userdata('logged_in')){
@@ -3050,7 +3062,9 @@ public function store_employee()
         $this->session->set_flashdata('error', validation_errors());
         $data['page_title'] = 'إضافة موظف جديد';
         $data['employee'] = null;
-        $this->load->view('templateo/employee_form_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/employee_form_view', $data ?? []);
+$this->load->view('template/new_footer');
     } else {
         // 3. MAP INPUTS TO DATABASE COLUMNS
         $data = [
@@ -3314,7 +3328,9 @@ public function employee_balances_report()
     $data['balances'] = $this->hr_model->get_all_employee_balances();
     
     // Load the view and pass the data to it
-    $this->load->view('templateo/employee_balances_report_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/employee_balances_report_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 public function fetch_all_balances()
@@ -3364,7 +3380,9 @@ public function employee_discounts_log($employee_id, $sheet_id)
     $sheet = $this->hr_model->get_salary_sheet($sheet_id);
     $data['sheet_period'] = ($sheet['start_date'] ?? '-') . ' / ' . ($sheet['end_date'] ?? '-');
 
-    $this->load->view('templateo/employee_discounts_popup', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/employee_discounts_popup', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 // --- POPUP: REPARATION DETAILS ---
@@ -3385,7 +3403,9 @@ public function employee_reparations_log($employee_id, $sheet_id)
     $sheet = $this->hr_model->get_salary_sheet($sheet_id);
     $data['sheet_period'] = ($sheet['start_date'] ?? '-') . ' / ' . ($sheet['end_date'] ?? '-');
 
-    $this->load->view('templateo/employee_reparations_popup', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/employee_reparations_popup', $data ?? []);
+$this->load->view('template/new_footer');
 }
 // --- ADD TO Users1.php ---
 // --- ADD TO Users1.php ---
@@ -3505,7 +3525,9 @@ public function overtime_dashboard()
     $data['is_finance'] = ($current_user == '1693' || $current_user == '2909' || $current_user == '1936' || $current_user == '2833'); // Flag for Finance Manager
     $data['title'] = 'لوحة متابعة العمل الإضافي';
     
-    $this->load->view('templateo/overtime_dashboard', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/overtime_dashboard', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 // 2. Fetch Data for DataTables (AJAX)
@@ -4082,7 +4104,9 @@ public function view_emp($employee_id)
 
 
     // Load the view with all the data
-    $this->load->view('templateo/view_emp', $data); // Assuming your view file name is view_emp.php
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/view_emp', $data ?? []);
+$this->load->view('template/new_footer'); // Assuming your view file name is view_emp.php
 }
 // In Users1.php
 
@@ -4126,7 +4150,9 @@ public function list_eos_settlements()
         'all'      => 'الكل'
     ];
 
-    $this->load->view('templateo/list_eos_settlements_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/list_eos_settlements_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 public function insurance_discounts()
 {
@@ -4145,7 +4171,9 @@ public function insurance_discounts()
     // Fetch all employees for the "Add New" dropdown
     $data['employees'] = $this->hr_model->get_all_employees();
     
-    $this->load->view('templateo/insurance_discounts_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/insurance_discounts_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 // This function handles updating the discount percentage via AJAX

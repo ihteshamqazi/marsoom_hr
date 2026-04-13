@@ -14655,7 +14655,9 @@ public function violations_list()
     $data['current_user'] = $current_user;
     $data['page_title'] = 'سجل الملاحظات والمخالفات';
 
-    $this->load->view('templateo/violation_list_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/violation_list_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 // 4. Action for Employee Feedback
@@ -14743,7 +14745,9 @@ public function my_mandates() {
     $data['title'] = 'سجل الانتدابات';
 
     // 
-    $this->load->view('templateo/my_mandates', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/my_mandates', $data ?? []);
+    $this->load->view('template/new_footer');
     // 
 }
 // --- ADD TO Users1.php ---
@@ -14757,7 +14761,9 @@ public function documents_list() {
     $data['documents'] = $this->hr_model->get_all_documents();
     
     // قم بتحميل العرض (تأكد من مسار واسم ملف الـ View الخاص بك)
-    $this->load->view('templateo/document_list_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/document_list_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 // 2. عرض شاشة إضافة مستند (نافذة منبثقة أو صفحة عادية)
@@ -14767,7 +14773,9 @@ public function add_document() {
     }
     $this->load->model('hr_model');
     $data['employees'] = $this->hr_model->get_employees_list();
-    $this->load->view('templateo/document_form_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/document_form_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 // 3. معالجة حفظ المستندات المتعددة
@@ -14845,7 +14853,9 @@ public function manage_documents() {
     $this->load->model('hr_model');
     // جلب المستندات لعرضها في الجدول
     $data['documents'] = $this->hr_model->get_all_documents();
-    $this->load->view('templateo/document_manage_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/document_manage_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 // دالة لحفظ مستند جديد بملفات متعددة عبر AJAX
@@ -15001,7 +15011,9 @@ public function save_document_ajax() {
     ];
 
     // 5. Load view
-    $this->load->view('templateo/mandate_approvals', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/mandate_approvals', $data ?? []);
+    $this->load->view('template/new_footer');
 }
     // =========================================================
     // 4. WORKFLOW LOGIC: Approve/Reject Action
@@ -15267,7 +15279,9 @@ public function my_insurance_requests()
     // 3. Load View
     $data['page_title'] = 'طلبات التأمين الطبي';
   //   // Assuming standard header
-    $this->load->view('templateo/my_insurance_requests_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/my_insurance_requests_view', $data ?? []);
+    $this->load->view('template/new_footer');
  //    // Assuming standard footer
 }
    public function save_policy_ajax() {
@@ -15615,7 +15629,9 @@ public function download_payslip($safe_url = null)
     }
     $data['logo_base64'] = $logo_base64;
 
-    $this->load->view('templateo/payslip_print_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/payslip_print_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 /* ---------------------------------------------------
    PASTE THIS INSIDE: application/controllers/Users1.php
@@ -15843,7 +15859,9 @@ public function processed_payroll_report()
     ];
     
     // Load the new view
-    $this->load->view('templateo/processed_payroll_report_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/processed_payroll_report_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 // --- Add to Users1.php ---
 
@@ -15859,7 +15877,9 @@ public function processed_payroll_report()
         
         // Adjust the header/footer paths if yours are named differently
      //   $this->load->view('templateo/header', $data);
-        $this->load->view('templateo/delegation_list_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/delegation_list_view', $data ?? []);
+    $this->load->view('template/new_footer');
    //     
     }
 
@@ -15878,7 +15898,9 @@ public function processed_payroll_report()
         $data['title'] = 'تفاصيل المهام المفوضة';
         
       //  $this->load->view('templateo/header', $data);
-        $this->load->view('templateo/delegation_details_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/delegation_details_view', $data ?? []);
+    $this->load->view('template/new_footer');
      //   
     }
 // PASTE THIS NEW FUNCTION INSIDE your application/controllers/Users1.php
@@ -15901,7 +15923,9 @@ public function payroll_summary()
     ];
     
     // Load the new view we will create in the next step
-    $this->load->view('templateo/payroll_summary_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/payroll_summary_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 public function process_payroll()
 {
@@ -15942,7 +15966,9 @@ public function process_payroll()
     $data['get_leave_balance'] = $this->hr_model->get_leave_balance();
        
  
-        $this->load->view('templateo/leave_balances', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/leave_balances', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
      public function series_of_approvals() {
@@ -15953,7 +15979,9 @@ public function process_payroll()
     $data['get_series_of_approvals'] = $this->hr_model->get_series_of_approvals();
        
  
-        $this->load->view('templateo/series_of_approvals', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/series_of_approvals', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
 
@@ -15985,7 +16013,9 @@ public function process_payroll()
 
     if ($this->form_validation->run() === FALSE) {
         // عرض نموذج إضافة الإجازة
-        $this->load->view('templateo/add_vacations', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_vacations', $data ?? []);
+    $this->load->view('template/new_footer');
     } else {
         // إضافة الإجازة باستخدام الموديل
         $this->hr_model->add_vacations();
@@ -16014,7 +16044,9 @@ public function process_payroll()
 
     if ($this->form_validation->run() === FALSE) {
         // عرض نموذج إضافة الإجازة
-        $this->load->view('templateo/exemption', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/exemption', $data ?? []);
+    $this->load->view('template/new_footer');
     } else {
         // إضافة الإجازة باستخدام الموديل
         $this->hr_model->update_attendance_summary($id,$id2);
@@ -16048,7 +16080,9 @@ public function process_payroll()
  
         $data['attendance_data'] = $attendance_data;
 
-        $this->load->view('templateo/m1_hr', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/m1_hr', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
     private function _collect_opts_from_get()
@@ -16070,7 +16104,9 @@ public function process_payroll()
         $data['title'] = 'تقرير مقارنة التأمينات (GOSI) مع بيانات الموظفين (EMP1)';
         $data['opts']  = $opts; // نمررها للفيو لاستخدامها في شريط الأدوات ورابط التصدير
 
-        $this->load->view('templateo/compare_gosi_emp1', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/compare_gosi_emp1', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
     /**
@@ -16174,7 +16210,9 @@ public function employee_requests_report()
         '3' => 'مرفوض', '-1' => 'ملغى', '-2' => 'ملغى من الموارد البشرية'
     ];
 
-    $this->load->view('templateo/employee_requests_report_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/employee_requests_report_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 public function fetch_all_requests()
@@ -16367,7 +16405,9 @@ public function violations()
     }
  
     // Assuming the view file is named 'violations_view.php'
-    $this->load->view('templateo/violations', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/violations', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 public function get_employee_violation_details()

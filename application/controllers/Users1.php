@@ -4246,7 +4246,9 @@ public function new_employees_list()
     ];
     
     // Load the view and pass the data to it
-    $this->load->view('templateo/new_employees_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/new_employees_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 // You can add functions for ajax_add and ajax_delete here later if needed
 public function update_employee_data()
@@ -4381,9 +4383,10 @@ public function update_employee_data()
         $data = [];
         $data['active_page'] = 'dashboard';
         $data['page_title']  = 'لوحة التحكم';
-        $this->load->view('templateo/header5', $data);
-        $this->load->view('templateo/dashboard_view', $data);
-        $this->load->view('templateo/footer5', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []); 
+$this->load->view('templateo/dashboard_view', $data ?? []);
+$this->load->view('template/new_footer');
+ 
     }
 
         public function task() {
@@ -4412,7 +4415,9 @@ public function upload_gosi_csv_page()
     $data['csrf_hash'] = $this->security->get_csrf_hash();
     
     // We will create this view file next
-    $this->load->view('templateo/gosi_upload_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/gosi_upload_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 /**
@@ -4509,7 +4514,9 @@ public function clearance_parameters_list()
     $data['parameters'] = $this->hr_model->get_all_clearance_parameters();
     
     // We will create this view file
-    $this->load->view('templateo/clearance_parameters_list_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/clearance_parameters_list_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 /**
@@ -4528,7 +4535,9 @@ public function add_clearance_parameter()
     $data['page_title'] = 'إضافة مهمة مخالصة جديدة';
     
     // We will create this view file
-    $this->load->view('templateo/clearance_parameter_form_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/clearance_parameter_form_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 /**
@@ -4550,7 +4559,9 @@ public function edit_clearance_parameter($id)
     $data['employees'] = $this->hr_model->get_all_employees_for_dropdown();
     $data['page_title'] = 'تعديل مهمة المخالصة';
     
-    $this->load->view('templateo/clearance_parameter_form_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/clearance_parameter_form_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 /**
@@ -4669,7 +4680,9 @@ private function _parse_gosi_csv($file_path, $company_code)
 
     $data['company'] = $company; // لإظهار الفلتر الحالي
     $data['branch'] = $branch; // ⭐️ NEW: Pass branch to the view
-    $this->load->view('templateo/gosi_emp_compare_a4', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/gosi_emp_compare_a4', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 
@@ -4777,7 +4790,9 @@ private function _parse_gosi_csv($file_path, $company_code)
             'طلب مرفوض',
         ];
 
-        $this->load->view('templateo/create', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/create', $data ?? []);
+$this->load->view('template/new_footer');
     }
 
     // حفظ المهمة
@@ -4858,7 +4873,9 @@ private function _parse_gosi_csv($file_path, $company_code)
         $data['stats'] = $this->hr_model->get_stats_by_category($filters);
         $data['tasks'] = $this->hr_model->get_tasks1($filters);
 
-        $this->load->view('templateo/index1', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/index1', $data ?? []);
+$this->load->view('template/new_footer');
     }
 
     public function update_status()
@@ -5115,7 +5132,9 @@ $data['unpaid_leave_map'] = $this->hr_model->get_unpaid_leave_days_for_employees
                     $data['notes_map'] = [];
                 }
 
-                $this->load->view('templateo/payroll_view101', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/payroll_view101', $data ?? []);
+$this->load->view('template/new_footer');
             } else {
                 redirect('users/login');
             }
@@ -5146,7 +5165,9 @@ public function exemption_management()
         $data['csrf_hash'] = $this->security->get_csrf_hash();
 
         // Load the new view file
-        $this->load->view('templateo/exemption_management_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/exemption_management_view', $data ?? []);
+$this->load->view('template/new_footer');
     }
 public function update_resigned_employee_status_cron($token = '')
     {
@@ -5303,7 +5324,9 @@ public function emp_data101()
             $data['csrf_token_name'] = $this->security->get_csrf_token_name();
             $data['csrf_hash'] = $this->security->get_csrf_hash();
             
-            $this->load->view('templateo/emp_data101', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/emp_data101', $data ?? []);
+$this->load->view('template/new_footer');
         } else {
             redirect('users/login');
         }
@@ -5490,7 +5513,9 @@ public function renewal_system()
 
         $data['my_info'] = $this->db->where('employee_id', $user_id)->get('emp1')->row_array();
 
-        $this->load->view('templateo/renewal_system_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/renewal_system_view', $data ?? []);
+$this->load->view('template/new_footer');
     }
 
     public function process_renewal_system()
@@ -5668,9 +5693,10 @@ public function renewal_system()
             ],
         ];
 
-        $this->load->view('templateo/header5', $data);
-        $this->load->view('templateo/emp_view', $data);
-        $this->load->view('templateo/footer5', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []); 
+$this->load->view('templateo/emp_view', $data ?? []);
+$this->load->view('template/new_footer');
+ 
     }
 
 
@@ -5739,9 +5765,10 @@ public function renewal_system()
                       $data['title'] = 'اضافة مستخدم جديد';
                       $this->form_validation->set_rules('name', 'name', 'required'); 
                       if($this->form_validation->run() === FALSE){
-                      $this->load->view('templateo/header4');
-                      $this->load->view('templateo/add_project', $data);
-                      $this->load->view('templateo/footer4');
+                     
+                      $this->load->view('template/new_header_and_sidebar', $data ?? []);
+                      $this->load->view('templateo/add_project', $data ?? []);
+                      $this->load->view('template/new_footer'); 
                 } else {
  
                             
@@ -5774,10 +5801,10 @@ public function renewal_system()
                  
                       $data['title'] = 'اضافة مستخدم جديد';
                       $this->form_validation->set_rules('name', 'name', 'required'); 
-                      if($this->form_validation->run() === FALSE){
-                      $this->load->view('templateo/header4');
-                      $this->load->view('templateo/project_index', $data);
-                      $this->load->view('templateo/footer4');
+                      if($this->form_validation->run() === FALSE){ 
+                      $this->load->view('template/new_header_and_sidebar', $data ?? []);
+                      $this->load->view('templateo/project_index', $data ?? []);
+                      $this->load->view('template/new_footer'); 
                 } else {
  
                             

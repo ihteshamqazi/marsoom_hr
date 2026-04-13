@@ -180,7 +180,9 @@ public function manual_attendance_edit()
     $data['all_employees'] = $this->hr_model->get_all_employees();
     
  
-$this->load->view('templateo/manual_attendance_edit_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/manual_attendance_edit_view', $data ?? []);
+$this->load->view('template/new_footer');
  
 }
 // In Users1.php
@@ -277,7 +279,9 @@ public function saturday_work_management()
     $data['all_employees'] = $this->hr_model->get_all_employees(); // For the dropdown
     $data['csrf_name'] = $this->security->get_csrf_token_name();
     $data['csrf_hash'] = $this->security->get_csrf_hash();
-    $this->load->view('templateo/saturday_work_view', $data); // We will create this view next
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/saturday_work_view', $data ?? []);
+$this->load->view('template/new_footer'); // We will create this view next
 }
 
 public function get_saturday_assignments_ajax()
@@ -416,7 +420,9 @@ public function clearance_form()
         }
     }
 
-    $this->load->view('templateo/clearance_form_a4', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/clearance_form_a4', $data ?? []);
+$this->load->view('template/new_footer');
 }
 public function resignation_process_report()
 {
@@ -472,7 +478,9 @@ public function resignation_process_report()
     }
     
     // Load the view file
-    $this->load->view('templateo/resignation_process_report_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/resignation_process_report_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 // In application/controllers/Users1.php
 
@@ -833,7 +841,9 @@ public function end_of_service()
             
             if (!$row_data) {
                 $data['err'] = 'لا يمكن العثور على بيانات الموظف الأساسية.';
-                $this->load->view('templateo/end_of_service_a4', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/end_of_service_a4', $data ?? []);
+$this->load->view('template/new_footer');
                 return;
             }
 
@@ -964,7 +974,9 @@ public function end_of_service()
         $data['employees'] = $this->hr_model->get_all_employees(true);
     }
 
-    $this->load->view('templateo/end_of_service_a4', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/end_of_service_a4', $data ?? []);
+$this->load->view('template/new_footer');
 }
 public function update_adjustment_reason_ajax() {
     if (!$this->session->userdata('logged_in')) return;
@@ -1427,7 +1439,9 @@ public function employee_daily_log_ramadan($employee_id = null, $sheet_id = null
     }
 
     // Load the NEW RAMADAN view file
-    $this->load->view('templateo/employee_daily_log_ramadan_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/employee_daily_log_ramadan_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 public function employee_daily_log($employee_id = null, $sheet_id = null)
 {
@@ -1475,7 +1489,9 @@ public function employee_daily_log($employee_id = null, $sheet_id = null)
 
     // Load the view file
     // Make sure this path is correct. Previously we just used 'employee_daily_log_view'
-    $this->load->view('templateo/employee_daily_log_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/employee_daily_log_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 // In Users1.php
 public function ajax_update_leave_balance()
@@ -2058,7 +2074,9 @@ public function attendance()
         'attendance_data' => $attendance_data ?? []
     ];
 
-    $this->load->view('templateo/attendance_calendar', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/attendance_calendar', $data ?? []);
+$this->load->view('template/new_footer');
 }
 public function process_past_fingerprints() {
     // --- SECURITY CHECK ---

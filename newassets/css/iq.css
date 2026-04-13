@@ -210,3 +210,51 @@
     display: none;
   }
 }
+
+/* ========== App Footer ========== */
+.app-footer {
+  background-color: #181A3B;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.app-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.app-footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.app-footer-links a:hover {
+  color: #F29220;
+}
+
+.app-footer-copy {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+/* Responsive for small screens */
+@media (max-width: 576px) {
+  .app-footer {
+    padding: 1rem 0.75rem;
+  }
+  .app-footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

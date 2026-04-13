@@ -12058,7 +12058,9 @@ public function stop_salary_management()
     $data['csrf_name'] = $this->security->get_csrf_token_name();
     $data['csrf_hash'] = $this->security->get_csrf_hash();
     
-    $this->load->view('templateo/stop_salary_management', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/stop_salary_management', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 public function save_stop_salary()
@@ -12310,7 +12312,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
             // --- Form not submitted OR basic validation failed (e.g., CSRF, missing request_type) ---
             log_message('debug', 'Form validation FALSE - Loading view.');
             // $data['last_working_day'] is already set correctly for the view
-            $this->load->view('templateo/add_new_order', $data); // Load view with potential validation errors from CI
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer'); // Load view with potential validation errors from CI
         } else {
             // --- [8] FORM HAS BEEN SUBMITTED AND PASSED BASIC CI VALIDATION ---
             log_message('debug', '=== FORM SUBMISSION PASSED CI VALIDATION ===');
@@ -12366,7 +12370,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                         
                         $this->session->set_flashdata('error_message', 'عفواً، لا يمكن اختيار تاريخ في الماضي لهذا النوع من الإجازات.');
                         $data['last_working_day'] = $last_working_day_submit;
-                        $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                         return;
                     }
                 }
@@ -12390,7 +12396,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
             $this->session->set_flashdata('error_message', "عفواً، تم رفض الطلب لتجاوز نسبة القسم (10%). " . $capacity_check['msg']);
             
             $data['last_working_day'] = $last_working_day_submit;
-            $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
             return; 
         }
     }
@@ -12401,7 +12409,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                     log_message('error', 'SERVER VALIDATION FAILED (Resignation Date): ' . $error_msg); // Log as error
                     $this->session->set_flashdata('error_message', $error_msg);
                     $data['last_working_day'] = $last_working_day_submit; // Pass date back
-                    $this->load->view('templateo/add_new_order', $data); // Reload view
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer'); // Reload view
                     return; // Stop processing
                 } else {
                      log_message('debug', 'Server validation passed (Resignation Date Check). Last Day: ' . ($last_working_day_submit ?: 'N/A') . ', Vac Start: ' . ($vac_start_date_str ?: 'N/A'));
@@ -12411,19 +12421,25 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                 if (empty($vacation_type)) {
                     $this->session->set_flashdata('error_message', 'نوع الإجازة مطلوب.');
                      $data['last_working_day'] = $last_working_day_submit;
-                     $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                     return;
                 }
                 if (empty($vac_start_date_str) || ($day_type === 'full' && empty($vac_end_date_str))) {
                     $this->session->set_flashdata('error_message', 'تاريخ بداية ونهاية الإجازة مطلوب.');
                      $data['last_working_day'] = $last_working_day_submit;
-                     $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                     return;
                 }
                  if ($day_type === 'full' && $vac_end_date_str < $vac_start_date_str) {
                     $this->session->set_flashdata('error_message', 'تاريخ نهاية الإجازة يجب أن يكون بعد تاريخ البداية.');
                      $data['last_working_day'] = $last_working_day_submit;
-                     $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                     return;
                 }
 
@@ -12438,7 +12454,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                      if ($requested_days <= 0 && $vacation_type !== 'maternity') { // Added check for maternity
                          $this->session->set_flashdata('error_message', 'الفترة المحددة لا تحتوي على أيام عمل صالحة.');
                          $data['last_working_day'] = $last_working_day_submit;
-                         $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                          return;
                      }
                 }
@@ -12457,7 +12475,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                              $error_msg = "رصيد الإجازة السنوية غير كافٍ - الطلب {$requested_days} يوم بينما الرصيد المتاح {$available_balance} يوم فقط";
                              $this->session->set_flashdata('error_message', $error_msg);
                              $data['last_working_day'] = $last_working_day_submit;
-                             $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                              return;
                         }
                     }
@@ -12470,7 +12490,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                              $error_msg = "لا يمكن طلب أكثر من {$max_allowed} يوم لإجازة {$leave_type_details['name_ar']} - المطلوب: {$requested_days} يوم";
                              $this->session->set_flashdata('error_message', $error_msg);
                              $data['last_working_day'] = $last_working_day_submit;
-                             $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                              return;
                          }
                     }
@@ -12478,7 +12500,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                      $error_msg = 'نوع الإجازة المحدد غير صحيح أو غير فعال: ' . htmlspecialchars($vacation_type);
                      $this->session->set_flashdata('error_message', $error_msg);
                      $data['last_working_day'] = $last_working_day_submit;
-                     $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                      return;
                 }
                  log_message('debug', 'Server-side vacation balance/limit checks passed.');
@@ -12486,7 +12510,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                  if ($vacation_type === 'sick' && (empty($_FILES['vac']['name']['file']) || $_FILES['vac']['error']['file'] !== UPLOAD_ERR_OK) ) {
                     $this->session->set_flashdata('error_message', 'يجب إرفاق تقرير طبي للإجازة المرضية.');
                     $data['last_working_day'] = $last_working_day_submit;
-                    $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                     return;
                  }
 
@@ -12512,7 +12538,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                 if (!in_array($submit_norm_dept, $allowed_depts_normalized)) {
                     $this->session->set_flashdata('error_message', 'عفواً، قسمك غير مصرح له بتقديم طلب استئذان.');
                     $data['last_working_day'] = $last_working_day_submit;
-                    $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                     return;
                 }
 
@@ -12528,7 +12556,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                 if ($hours < 1 || $hours > 2) {
                     $this->session->set_flashdata('error_message', 'يجب أن تكون مدة الاستئذان بين ساعة وساعتين فقط.');
                     $data['last_working_day'] = $last_working_day_submit;
-                    $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                     return;
                 }
 
@@ -12540,7 +12570,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                 if (($used_hours + $hours) > 6) {
                     $this->session->set_flashdata('error_message', 'لقد تجاوزت الحد الأقصى لرصيد الاستئذان هذا الشهر (6 ساعات). المتاح لك: ' . (6 - $used_hours) . ' ساعة.');
                     $data['last_working_day'] = $last_working_day_submit;
-                    $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                     return;
                 }
             }
@@ -12565,7 +12597,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
         log_message('error', 'SERVER VALIDATION FAILED (Delegation Conflict): ' . $error_msg);
         $this->session->set_flashdata('error_message', $error_msg);
         $data['last_working_day'] = $last_working_day_submit;
-        $this->load->view('templateo/add_new_order', $data); // Reload view
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer'); // Reload view
         return; // Stop processing
     } else {
         log_message('debug', 'Server validation passed (Delegation Conflict Check 1).');
@@ -12595,7 +12629,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                     log_message('error', 'SERVER VALIDATION FAILED (Delegate Availability Conflict): ' . $error_msg);
                     $this->session->set_flashdata('error_message', $error_msg);
                     $data['last_working_day'] = $last_working_day_submit;
-                    $this->load->view('templateo/add_new_order', $data); // Reload view
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer'); // Reload view
                     return; // Stop processing
                 } else {
                      log_message('debug', 'Server validation passed (Delegate Availability Check 2).');
@@ -12611,7 +12647,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                 log_message('error', 'Duplicate request detected: ' . $error_message_dup); // Log as error
                 $this->session->set_flashdata('error_message', $error_message_dup);
                 $data['last_working_day'] = $last_working_day_submit; // Pass date back
-                $this->load->view('templateo/add_new_order', $data); // Reload view
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer'); // Reload view
                 return;
             } else {
                 log_message('debug', 'No duplicate requests found');
@@ -12635,14 +12673,18 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                      if ($isFileRequired) {
                          $this->session->set_flashdata('error_message', 'مرفق الإجازة المرضية مطلوب.');
                          $data['last_working_day'] = $last_working_day_submit;
-                         $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                          return;
                      }
                      // If optional file has an error (other than no file)
                      elseif ($_FILES[$fileInputName]['error']['file'] !== UPLOAD_ERR_NO_FILE) {
                          $this->session->set_flashdata('error_message', 'حدث خطأ أثناء رفع الملف المرفق.');
                          $data['last_working_day'] = $last_working_day_submit;
-                         $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                          return;
                      }
                      // Else: Optional file just wasn't uploaded, which is fine.

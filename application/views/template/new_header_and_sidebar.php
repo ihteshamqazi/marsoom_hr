@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= isset($title) ? html_escape($title) : 'Recruitment' ?></title>
-    <?php $this->load->view('includes/common-css-links'); ?>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="<?= base_url('newassets/css/style.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('newassets/css/iq.css') ?>" rel="stylesheet">
+
     <?php if (!empty($extra_css)): ?>
       <?php $css_items = is_array($extra_css) ? $extra_css : [$extra_css]; ?>
       <?php foreach ($css_items as $css): ?>

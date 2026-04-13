@@ -9403,9 +9403,11 @@ public function orders_emp()
     $user_info = $this->hr_model->get_employee_details($logged_in_user_id);
     $data['my_department'] = $user_info['department'] ?? ''; 
     $data['current_user_id'] = $logged_in_user_id;
-   // $this->load->view('templateo/header1');
-    $this->load->view('templateo/orders_emp', $data);
-}
+
+     $this->load->view('template/new_header_and_sidebar', $data);
+     $this->load->view('templateo/orders_emp', $data);
+     $this->load->view('template/new_footer');
+ }
 // In Users1.php
 
 public function fetch_orders()

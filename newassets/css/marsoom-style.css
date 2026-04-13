@@ -3226,8 +3226,7 @@ tbody tr:hover td {
 
 /* ========== App Footer ========== */
 .app-footer {
-  background-color: #181A3B;
-  margin-top: 2rem;
+  background-color: #181A3B; 
   padding: 1.25rem 1rem;
   text-align: center;
 }

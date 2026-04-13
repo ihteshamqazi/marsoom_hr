@@ -5886,7 +5886,9 @@ $this->load->view('template/new_footer');
         
           
          $this->load->view('templateo/header2'); 
-         $this->load->view('templateo/dashbord_analyses',$data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/dashbord_analyses', $data ?? []);
+$this->load->view('template/new_footer');
          $this->load->view('templateo/footer2');  
       
     }
@@ -6135,7 +6137,9 @@ public function payroll_compare()
         'companies' => $out,
     ];
 
-    $this->load->view('templateo/payroll_compare_a4', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/payroll_compare_a4', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 
@@ -6158,7 +6162,9 @@ public function leave_balances_up()
     $data['csrf_hash'] = $this->security->get_csrf_hash();
     
     // Assuming your view file is named 'leave_balances_view.php'
-    $this->load->view('templateo/leave_balances_view', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/leave_balances_view', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 // ACTION 2: ADD this new function anywhere in Users1.php
@@ -6433,7 +6439,9 @@ public function update_leave_balance()
     foreach ($levels as &$arr) { $arr = array_values(array_unique($arr)); }
 
     $data = compact('head','levels','edges','map');
-    $this->load->view('templateo/org_pyramid', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/org_pyramid', $data ?? []);
+$this->load->view('template/new_footer');
 }
 
 
@@ -6454,7 +6462,9 @@ public function update_leave_balance()
 
 
 
-             $this->load->view('templateo/extn', $data);  
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/extn', $data ?? []);
+$this->load->view('template/new_footer');  
 
 
           }
@@ -6547,7 +6557,9 @@ public function update_leave_balance()
               $otp = hash('sha256', $otp2);
               $this->form_validation->set_rules('otp', 'otp', 'required');
               if($this->form_validation->run() === FALSE){    
-                $this->load->view('templateo/check_otp1', $data);   
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/check_otp1', $data ?? []);
+$this->load->view('template/new_footer');   
               } else {
         
                if ($otp == $otp1) {
@@ -8606,7 +8618,9 @@ public function vacations() {
     $data['get_salary_vacations'] = $this->hr_model->get_salary_vacations();
        
  
-        $this->load->view('templateo/vacations', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/vacations', $data ?? []);
+$this->load->view('template/new_footer');
     }
 
     public function discounts() {
@@ -8618,7 +8632,9 @@ public function vacations() {
     $data['get_salary_vacations'] = $this->hr_model->get_salary_discounts();
        
  
-        $this->load->view('templateo/discounts', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/discounts', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
   // In application/controllers/Users1.php
@@ -8645,7 +8661,9 @@ public function discounts101() {
     $data['csrf_token_name'] = $this->security->get_csrf_token_name();
     $data['csrf_hash'] = $this->security->get_csrf_hash();
        
-    $this->load->view('templateo/discounts101', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/discounts101', $data ?? []);
+$this->load->view('template/new_footer');
 }
 // 2. ADD these FOUR new functions below it
 
@@ -8717,7 +8735,9 @@ public function salary_sheets_list()
     $data['sheets'] = $this->hr_model->get_all_salary_sheets_full(); 
     $data['page_title'] = 'أرشيف مسيرات الرواتب';
     
-    $this->load->view('templateo/salary_sheets_kanban', $data);
+$this->load->view('template/new_header_and_sidebar', $data ?? []);
+$this->load->view('templateo/salary_sheets_kanban', $data ?? []);
+$this->load->view('template/new_footer');
 }
 public function salary_sheets_list_ramadan()
 {

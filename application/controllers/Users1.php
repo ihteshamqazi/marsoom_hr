@@ -12712,7 +12712,9 @@ $data['current_user_joining_date'] = $current_emp_details['joining_date'] ?? '';
                          log_message('error', $upload_error); // Log as error
                          $this->session->set_flashdata('error_message', $upload_error);
                          $data['last_working_day'] = $last_working_day_submit;
-                         $this->load->view('templateo/add_new_order', $data); // Reload view
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer'); // Reload view
                          return;
                      }
                  } // End else block for file uploaded check
@@ -12812,7 +12814,9 @@ if ($request_type == 'overtime') {
             } else {
                  // If saving failed, reload the form with the error message
                  $data['last_working_day'] = $last_working_day_submit; // Pass date back
-                 $this->load->view('templateo/add_new_order', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_new_order', $data ?? []);
+    $this->load->view('template/new_footer');
                  return;
             }
 
@@ -12944,7 +12948,9 @@ public function hr_comprehensive_report()
     $data['stats'] = $this->hr_model->get_dashboard_stats();
     
     //
-    $this->load->view('templateo/hr_comprehensive_report_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/hr_comprehensive_report_view', $data ?? []);
+    $this->load->view('template/new_footer');
   //  
 }
 // =============================================================
@@ -12974,7 +12980,9 @@ public function hr_comprehensive_report()
         $data['csrf_name'] = $this->security->get_csrf_token_name();
         $data['csrf_hash'] = $this->security->get_csrf_hash();
 
-        $this->load->view('templateo/edit_request_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/edit_request_view', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
     public function update_request_submission()
@@ -13054,7 +13062,9 @@ public function hr_comprehensive_report()
     }
     // --- HR CUSTOMIZATION END ---
 
-    $this->load->view('templateo/mandate_form', $data); 
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/mandate_form', $data ?? []);
+    $this->load->view('template/new_footer'); 
 }
 
     public function mandate_settings() {
@@ -13063,7 +13073,9 @@ public function hr_comprehensive_report()
         
         $this->load->model('hr_model');
         $data['policies'] = $this->hr_model->get_policies();
-        $this->load->view('templateo/mandate_settings', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/mandate_settings', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
     // --- AJAX HANDLERS ---
@@ -13519,7 +13531,9 @@ public function mandate_details($id)
     $data['is_admin'] = in_array($my_id, ['2230', '2515', '2774', '2784', '1835', '2901']);
 
 //   
-    $this->load->view('templateo/mandate_details', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/mandate_details', $data ?? []);
+    $this->load->view('template/new_footer');
  //   
 }
 // In application/controllers/Users1.php
@@ -13553,7 +13567,9 @@ public function print_mandate($id)
     // 3. Fetch Destinations
     $data['destinations'] = $this->db->get_where('mandate_destinations', ['request_id' => $id])->result_array();
 
-    $this->load->view('templateo/print_mandate', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/print_mandate', $data ?? []);
+    $this->load->view('template/new_footer');
 }
     public function labor_case_request() {
         if (!$this->session->userdata('logged_in')) redirect('users/login');
@@ -13638,7 +13654,9 @@ public function print_mandate($id)
         $data['requests'] = $this->db->get()->result_array();
         
     //    
-        $this->load->view('templateo/labor_case_approvals', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/labor_case_approvals', $data ?? []);
+    $this->load->view('template/new_footer');
     //    
     }
 // In your Users1 controller
@@ -13668,7 +13686,9 @@ public function labor_cases_list() {
     $this->db->order_by('created_at', 'DESC');
     $data['cases'] = $this->db->get()->result_array();
     
-    $this->load->view('templateo/labor_cases_list', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/labor_cases_list', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 // In application/controllers/Users1.php
 
@@ -13747,7 +13767,9 @@ public function get_employee_requests_ajax()
         $data['timeline'] = $this->db->get()->result_array();
 
      //   
-        $this->load->view('templateo/labor_case_details', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/labor_case_details', $data ?? []);
+    $this->load->view('template/new_footer');
     //    
     }
 public function print_clearance_form($resignation_id) {
@@ -13804,7 +13826,9 @@ public function print_clearance_form($resignation_id) {
         }
     }
 
-    $this->load->view('templateo/print_clearance_form', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/print_clearance_form', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 // In application/controllers/Users1.php
 
@@ -13898,7 +13922,9 @@ public function send_experience_certificate() {
         $data['already_submitted'] = $exists ? true : false;
 
      //   
-        $this->load->view('templateo/general_survey', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/general_survey', $data ?? []);
+    $this->load->view('template/new_footer');
      //   
     }
 // --- HAPPINESS INDEX ---
@@ -13913,7 +13939,9 @@ public function send_experience_certificate() {
         $data['already_done'] = $exists ? true : false;
         
    //     
-        $this->load->view('templateo/happiness_index', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/happiness_index', $data ?? []);
+    $this->load->view('template/new_footer');
    //     
     }
 
@@ -14078,7 +14106,9 @@ public function modify_staff_record($id) {
         
    //     
         // تأكد من أن اسم ملف العرض (View) مطابق لاسم الملف الذي أنشأته
-        $this->load->view('templateo/modify_staff_record', $data); 
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/modify_staff_record', $data ?? []);
+    $this->load->view('template/new_footer'); 
     //    
     }
     /**
@@ -14095,7 +14125,9 @@ public function modify_staff_record($id) {
         $data['employees'] = $this->hr_model->get_all_employees_for_list();
         
       //  
-        $this->load->view('templateo/manage_employees_list', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/manage_employees_list', $data ?? []);
+    $this->load->view('template/new_footer');
      //   
     }
     // In application/controllers/Users1.php
@@ -14257,7 +14289,9 @@ public function insurance_details($req_id) {
 
         $data['title'] = 'تفاصيل طلب التأمين';
     //    
-        $this->load->view('templateo/insurance_details', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/insurance_details', $data ?? []);
+    $this->load->view('template/new_footer');
     //    
     }
     // --- APPROVALS PAGE ---
@@ -14284,7 +14318,9 @@ public function insurance_details($req_id) {
         
         $data['title'] = 'اعتماد التأمين الطبي';
      //   
-        $this->load->view('templateo/insurance_approvals', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/insurance_approvals', $data ?? []);
+    $this->load->view('template/new_footer');
       //  
     }
 
@@ -14532,7 +14568,9 @@ public function add_violation_note()
     $data['employees'] = $this->hr_model->get_all_employees_simple(); 
     $data['page_title'] = 'تسجيل مخالفة / ملاحظة إدارية';
 
-    $this->load->view('templateo/add_violation_view', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/add_violation_view', $data ?? []);
+    $this->load->view('template/new_footer');
 }
 
 // 2. Action to Save the Note

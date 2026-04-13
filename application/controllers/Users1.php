@@ -5847,9 +5847,11 @@ $this->load->view('template/new_footer');
                       $data['title'] = 'اضافة مستخدم جديد';
                       $this->form_validation->set_rules('name', 'name', 'required'); 
                       if($this->form_validation->run() === FALSE){
-                      $this->load->view('templateo/header2');
-                      $this->load->view('templateo/main', $data);
-                      $this->load->view('templateo/footer2');
+                    
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/main', $data ?? []);
+    $this->load->view('template/new_footer');
+                      
                 } else {
  
                             
@@ -8997,7 +8999,9 @@ public function upload_discounts_sheet()
     $data['get_salary_vacations'] = $this->hr_model->get_salary_reparations();
        
  
-        $this->load->view('templateo/reparations', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/reparations', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 // In controllers/Users1.php
 
@@ -16532,7 +16536,9 @@ public function get_employee_violation_details()
  
         $data['attendance_data'] = $attendance_data;
 
-        $this->load->view('templateo/m4_hr', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/m4_hr', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
 public function save_attendance_summary($sheet_id = null)
@@ -16681,7 +16687,9 @@ public function attendance_view() {
     
     // If there are no employees, stop here to avoid errors
     if (empty($employees)) {
-        $this->load->view('templateo/m44_hr', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/m44_hr', $data ?? []);
+    $this->load->view('template/new_footer');
         return;
     }
 
@@ -16816,7 +16824,9 @@ foreach ($all_mandate_requests as $mandate) {
     $data['attendance_data'] = $this->hr_model->get_attendance_data();
     $data['data_map'] = $data_map;
     
-    $this->load->view('templateo/m44_hr', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/m44_hr', $data ?? []);
+    $this->load->view('template/new_footer');
 }
      public function payroll_view1() {
 
@@ -16837,7 +16847,9 @@ foreach ($all_mandate_requests as $mandate) {
  
         $data['attendance_data'] = $attendance_data;
 
-        $this->load->view('templateo/m3_hr', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/m3_hr', $data ?? []);
+    $this->load->view('template/new_footer');
     }
 
      public function login(){
@@ -16847,7 +16859,9 @@ foreach ($all_mandate_requests as $mandate) {
       $this->form_validation->set_rules('username', 'Username', 'required');
       $this->form_validation->set_rules('password', 'Password', 'required');
       if($this->form_validation->run() === FALSE){    
-        $this->load->view('templateo/login1', $data);   
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/login1', $data ?? []);
+    $this->load->view('template/new_footer');   
       } else {
         $username = $this->input->post('username');
         $password =MD5($this->input->post('password'));
@@ -17421,7 +17435,9 @@ foreach ($all_mandate_requests as $mandate) {
                       if($this->form_validation->run() === FALSE){
 
                     
-                      $this->load->view('templateo/re_pass', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/re_pass', $data ?? []);
+    $this->load->view('template/new_footer');
                    
 
                    
@@ -17468,7 +17484,9 @@ foreach ($all_mandate_requests as $mandate) {
                       if($this->form_validation->run() === FALSE){
 
                       $this->load->view('templateo/header2');
-                      $this->load->view('templateo/re_password', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/re_password', $data ?? []);
+    $this->load->view('template/new_footer');
                       $this->load->view('templateo/footer2');
 
                    
@@ -17503,7 +17521,9 @@ foreach ($all_mandate_requests as $mandate) {
                       $this->form_validation->set_rules('password', 'name', 'required'); 
                       if($this->form_validation->run() === FALSE){
                       
-                      $this->load->view('templateo/re_password1', $data);
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+    $this->load->view('templateo/re_password1', $data ?? []);
+    $this->load->view('template/new_footer');
                       
                 } else {
 

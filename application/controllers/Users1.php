@@ -179,7 +179,9 @@ public function manual_attendance_edit()
     $data['csrf_hash'] = $this->security->get_csrf_hash();
     $data['all_employees'] = $this->hr_model->get_all_employees();
     
-    $this->load->view('templateo/manual_attendance_edit_view', $data);
+ 
+$this->load->view('templateo/manual_attendance_edit_view', $data);
+ 
 }
 // In Users1.php
 // --- SEND CLEARANCE VIA EMAIL ---
@@ -2977,7 +2979,7 @@ $data['ot_estimated_amount'] = 0;
         if(!$this ->session->userdata('logged_in')){
             redirect('users/login');
           }else{
-             $this->load->view('templateo/header');  
+               
              $this->load->view('templateo/index1');   
 
 
@@ -9404,9 +9406,9 @@ public function orders_emp()
     $data['my_department'] = $user_info['department'] ?? ''; 
     $data['current_user_id'] = $logged_in_user_id;
 
-     $this->load->view('template/new_header_and_sidebar', $data);
+     
      $this->load->view('templateo/orders_emp', $data);
-     $this->load->view('template/new_footer');
+     
  }
 // In Users1.php
 
@@ -12766,9 +12768,9 @@ public function hr_comprehensive_report()
     // Data for Top Cards
     $data['stats'] = $this->hr_model->get_dashboard_stats();
     
-    //$this->load->view('templateo/header');
+    //
     $this->load->view('templateo/hr_comprehensive_report_view', $data);
-  //  $this->load->view('templateo/footer');
+  //  
 }
 // =============================================================
     // CONTROLLER UPDATES
@@ -13341,9 +13343,9 @@ public function mandate_details($id)
     $my_id = $this->session->userdata('username');
     $data['is_admin'] = in_array($my_id, ['2230', '2515', '2774', '2784', '1835', '2901']);
 
-//   $this->load->view('templateo/header');
+//   
     $this->load->view('templateo/mandate_details', $data);
- //   $this->load->view('templateo/footer');
+ //   
 }
 // In application/controllers/Users1.php
 
@@ -13380,9 +13382,9 @@ public function print_mandate($id)
 }
     public function labor_case_request() {
         if (!$this->session->userdata('logged_in')) redirect('users/login');
-     //   $this->load->view('templateo/header');
+     //   
         $this->load->view('templateo/labor_case_form');
-    //    $this->load->view('templateo/footer');
+    //    
     }
 
     public function submit_labor_case_ajax() {
@@ -13460,9 +13462,9 @@ public function print_mandate($id)
         
         $data['requests'] = $this->db->get()->result_array();
         
-    //    $this->load->view('templateo/header');
+    //    
         $this->load->view('templateo/labor_case_approvals', $data);
-    //    $this->load->view('templateo/footer');
+    //    
     }
 // In your Users1 controller
 public function labor_cases_list() {
@@ -13569,9 +13571,9 @@ public function get_employee_requests_ajax()
         $this->db->where('order_id', $id)->where('order_type', 'LaborCase')->order_by('id', 'ASC');
         $data['timeline'] = $this->db->get()->result_array();
 
-     //   $this->load->view('templateo/header');
+     //   
         $this->load->view('templateo/labor_case_details', $data);
-    //    $this->load->view('templateo/footer');
+    //    
     }
 public function print_clearance_form($resignation_id) {
     if (!$this->session->userdata('logged_in')) redirect('users/login');
@@ -13720,9 +13722,9 @@ public function send_experience_certificate() {
         
         $data['already_submitted'] = $exists ? true : false;
 
-     //   $this->load->view('templateo/header');
+     //   
         $this->load->view('templateo/general_survey', $data);
-     //   $this->load->view('templateo/footer');
+     //   
     }
 // --- HAPPINESS INDEX ---
     public function happiness_index() {
@@ -13735,9 +13737,9 @@ public function send_experience_certificate() {
         
         $data['already_done'] = $exists ? true : false;
         
-   //     $this->load->view('templateo/header');
+   //     
         $this->load->view('templateo/happiness_index', $data);
-   //     $this->load->view('templateo/footer');
+   //     
     }
 
     public function submit_happiness_ajax() {
@@ -13850,9 +13852,9 @@ public function send_experience_certificate() {
     }
     public function new_insurance_request() {
         if (!$this->session->userdata('logged_in')) redirect('users/login');
-    //    $this->load->view('templateo/header');
+    //    
         $this->load->view('templateo/insurance_form'); // The Attractive View
-   //     $this->load->view('templateo/footer');
+   //     
     }
 public function modify_staff_record($id) {
         // التحقق من تسجيل الدخول
@@ -13899,10 +13901,10 @@ public function modify_staff_record($id) {
         // جلب البيانات باستخدام اسم الدالة الجديد في الموديل
         $data['employee'] = $this->hr_model->fetch_staff_details($id);
         
-   //     $this->load->view('templateo/header');
+   //     
         // تأكد من أن اسم ملف العرض (View) مطابق لاسم الملف الذي أنشأته
         $this->load->view('templateo/modify_staff_record', $data); 
-    //    $this->load->view('templateo/footer');
+    //    
     }
     /**
      * عرض قائمة الموظفين للبحث والتعديل
@@ -13917,9 +13919,9 @@ public function modify_staff_record($id) {
         // جلب جميع الموظفين من الموديل
         $data['employees'] = $this->hr_model->get_all_employees_for_list();
         
-      //  $this->load->view('templateo/header');
+      //  
         $this->load->view('templateo/manage_employees_list', $data);
-     //   $this->load->view('templateo/footer');
+     //   
     }
     // In application/controllers/Users1.php
 public function submit_insurance_ajax() {
@@ -14079,9 +14081,9 @@ public function insurance_details($req_id) {
         $data['timeline'] = $this->db->get()->result_array();
 
         $data['title'] = 'تفاصيل طلب التأمين';
-    //    $this->load->view('templateo/header');
+    //    
         $this->load->view('templateo/insurance_details', $data);
-    //    $this->load->view('templateo/footer');
+    //    
     }
     // --- APPROVALS PAGE ---
     public function insurance_approvals() {
@@ -14106,9 +14108,9 @@ public function insurance_details($req_id) {
         $data['requests'] = $this->db->get()->result_array();
         
         $data['title'] = 'اعتماد التأمين الطبي';
-     //   $this->load->view('templateo/header');
+     //   
         $this->load->view('templateo/insurance_approvals', $data);
-      //  $this->load->view('templateo/footer');
+      //  
     }
 
     // --- PROCESS APPROVAL (The Workflow Logic) ---
@@ -14527,9 +14529,9 @@ public function my_mandates() {
     $data['is_hr'] = $is_hr;
     $data['title'] = 'سجل الانتدابات';
 
-    // $this->load->view('templateo/header');
+    // 
     $this->load->view('templateo/my_mandates', $data);
-    // $this->load->view('templateo/footer');
+    // 
 }
 // --- ADD TO Users1.php ---
 
@@ -15051,9 +15053,9 @@ public function my_insurance_requests()
 
     // 3. Load View
     $data['page_title'] = 'طلبات التأمين الطبي';
-  //  $this->load->view('templateo/header'); // Assuming standard header
+  //   // Assuming standard header
     $this->load->view('templateo/my_insurance_requests_view', $data);
- //   $this->load->view('templateo/footer'); // Assuming standard footer
+ //    // Assuming standard footer
 }
    public function save_policy_ajax() {
         if (!$this->session->userdata('logged_in')) redirect('users/login');
@@ -15645,7 +15647,7 @@ public function processed_payroll_report()
         // Adjust the header/footer paths if yours are named differently
      //   $this->load->view('templateo/header', $data);
         $this->load->view('templateo/delegation_list_view', $data);
-   //     $this->load->view('templateo/footer');
+   //     
     }
 
     public function delegation_details($delegate_id) {
@@ -15664,7 +15666,7 @@ public function processed_payroll_report()
         
       //  $this->load->view('templateo/header', $data);
         $this->load->view('templateo/delegation_details_view', $data);
-     //   $this->load->view('templateo/footer');
+     //   
     }
 // PASTE THIS NEW FUNCTION INSIDE your application/controllers/Users1.php
 
@@ -17247,9 +17249,9 @@ foreach ($all_mandate_requests as $mandate) {
                       $data['customers'] = $this->user_model->get_userdata_star_update();
                       $this->form_validation->set_rules('password', 'name', 'required'); 
                       if($this->form_validation->run() === FALSE){
-                      $this->load->view('templateo/header');
+                      
                       $this->load->view('templateo/re_password1', $data);
-                      $this->load->view('templateo/footer');
+                      
                 } else {
 
 

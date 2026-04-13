@@ -2499,3 +2499,463 @@ INFO - 2026-04-13 11:20:48 --> Helper loaded: html_helper
 DEBUG - 2026-04-13 11:20:48 --> Session class already loaded. Second attempt ignored.
 INFO - 2026-04-13 11:20:48 --> Final output sent to browser
 DEBUG - 2026-04-13 11:20:48 --> Total execution time: 0.0684
+INFO - 2026-04-13 13:25:04 --> Config Class Initialized
+INFO - 2026-04-13 13:25:04 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:25:04 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:25:04 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:25:04 --> URI Class Initialized
+INFO - 2026-04-13 13:25:04 --> Router Class Initialized
+INFO - 2026-04-13 13:25:04 --> Output Class Initialized
+INFO - 2026-04-13 13:25:04 --> Security Class Initialized
+DEBUG - 2026-04-13 13:25:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:25:04 --> Input Class Initialized
+INFO - 2026-04-13 13:25:04 --> Language Class Initialized
+ERROR - 2026-04-13 13:25:04 --> Severity: error --> Exception: syntax error, unexpected ')' C:\laragon\www\hr\application\controllers\Users1.php 183
+INFO - 2026-04-13 13:25:56 --> Config Class Initialized
+INFO - 2026-04-13 13:25:56 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:25:56 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:25:56 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:25:56 --> URI Class Initialized
+INFO - 2026-04-13 13:25:56 --> Router Class Initialized
+INFO - 2026-04-13 13:25:56 --> Output Class Initialized
+INFO - 2026-04-13 13:25:56 --> Security Class Initialized
+DEBUG - 2026-04-13 13:25:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:25:56 --> Input Class Initialized
+INFO - 2026-04-13 13:25:56 --> Language Class Initialized
+INFO - 2026-04-13 13:25:56 --> Loader Class Initialized
+INFO - 2026-04-13 13:25:56 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:25:56 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:25:56 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:25:56 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:25:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:25:56 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:25:56 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:25:56 --> Pagination Class Initialized
+INFO - 2026-04-13 13:25:56 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:25:56 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:25:56 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:25:56 --> Model "user_model" initialized
+INFO - 2026-04-13 13:25:56 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:25:56 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:25:56 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:25:56 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:25:56 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:25:56 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:25:56 --> Controller Class Initialized
+INFO - 2026-04-13 16:25:56 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:25:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:25:56 --> File loaded: C:\laragon\www\hr\application\views\template/top-bar.php
+INFO - 2026-04-13 16:25:56 --> File loaded: C:\laragon\www\hr\application\views\template/side-bar.php
+INFO - 2026-04-13 16:25:56 --> File loaded: C:\laragon\www\hr\application\views\template/new_header_and_sidebar.php
+INFO - 2026-04-13 16:25:56 --> File loaded: C:\laragon\www\hr\application\views\templateo/orders_emp.php
+INFO - 2026-04-13 16:25:56 --> File loaded: C:\laragon\www\hr\application\views\template/new_footer.php
+INFO - 2026-04-13 16:25:56 --> Final output sent to browser
+DEBUG - 2026-04-13 16:25:56 --> Total execution time: 0.1233
+INFO - 2026-04-13 13:25:56 --> Config Class Initialized
+INFO - 2026-04-13 13:25:56 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:25:56 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:25:56 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:25:56 --> URI Class Initialized
+INFO - 2026-04-13 13:25:56 --> Router Class Initialized
+INFO - 2026-04-13 13:25:56 --> Output Class Initialized
+INFO - 2026-04-13 13:25:56 --> Security Class Initialized
+DEBUG - 2026-04-13 13:25:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:25:56 --> Input Class Initialized
+INFO - 2026-04-13 13:25:56 --> Language Class Initialized
+INFO - 2026-04-13 13:25:56 --> Loader Class Initialized
+INFO - 2026-04-13 13:25:56 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:25:56 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:25:56 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:25:56 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:25:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:25:56 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:25:56 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:25:56 --> Pagination Class Initialized
+INFO - 2026-04-13 13:25:56 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:25:57 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:25:57 --> Model "user_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:25:57 --> Controller Class Initialized
+INFO - 2026-04-13 16:25:57 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:25:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:25:57 --> Final output sent to browser
+DEBUG - 2026-04-13 16:25:57 --> Total execution time: 0.1341
+INFO - 2026-04-13 13:25:57 --> Config Class Initialized
+INFO - 2026-04-13 13:25:57 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:25:57 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:25:57 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:25:57 --> URI Class Initialized
+INFO - 2026-04-13 13:25:57 --> Router Class Initialized
+INFO - 2026-04-13 13:25:57 --> Output Class Initialized
+INFO - 2026-04-13 13:25:57 --> Security Class Initialized
+DEBUG - 2026-04-13 13:25:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:25:57 --> Input Class Initialized
+INFO - 2026-04-13 13:25:57 --> Language Class Initialized
+INFO - 2026-04-13 13:25:57 --> Loader Class Initialized
+INFO - 2026-04-13 13:25:57 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:25:57 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:25:57 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:25:57 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:25:57 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:25:57 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:25:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:25:57 --> Pagination Class Initialized
+INFO - 2026-04-13 13:25:57 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:25:57 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:25:57 --> Model "user_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:25:57 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:25:57 --> Controller Class Initialized
+INFO - 2026-04-13 16:25:57 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:25:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:25:57 --> Final output sent to browser
+DEBUG - 2026-04-13 16:25:57 --> Total execution time: 0.1421
+INFO - 2026-04-13 13:27:00 --> Config Class Initialized
+INFO - 2026-04-13 13:27:00 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:27:00 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:27:00 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:27:00 --> URI Class Initialized
+INFO - 2026-04-13 13:27:00 --> Router Class Initialized
+INFO - 2026-04-13 13:27:00 --> Output Class Initialized
+INFO - 2026-04-13 13:27:00 --> Security Class Initialized
+DEBUG - 2026-04-13 13:27:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:27:00 --> Input Class Initialized
+INFO - 2026-04-13 13:27:00 --> Language Class Initialized
+ERROR - 2026-04-13 13:27:00 --> Severity: error --> Exception: syntax error, unexpected ')' C:\laragon\www\hr\application\controllers\Users1.php 183
+INFO - 2026-04-13 13:27:15 --> Config Class Initialized
+INFO - 2026-04-13 13:27:15 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:27:15 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:27:15 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:27:15 --> URI Class Initialized
+INFO - 2026-04-13 13:27:15 --> Router Class Initialized
+INFO - 2026-04-13 13:27:15 --> Output Class Initialized
+INFO - 2026-04-13 13:27:15 --> Security Class Initialized
+DEBUG - 2026-04-13 13:27:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:27:15 --> Input Class Initialized
+INFO - 2026-04-13 13:27:15 --> Language Class Initialized
+INFO - 2026-04-13 13:27:15 --> Loader Class Initialized
+INFO - 2026-04-13 13:27:15 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:27:15 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:27:15 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:27:15 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:27:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:27:15 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:27:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:27:15 --> Pagination Class Initialized
+INFO - 2026-04-13 13:27:15 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:27:15 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:27:15 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:27:16 --> Model "user_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:27:16 --> Controller Class Initialized
+INFO - 2026-04-13 16:27:16 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:27:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:27:16 --> File loaded: C:\laragon\www\hr\application\views\template/top-bar.php
+INFO - 2026-04-13 16:27:16 --> File loaded: C:\laragon\www\hr\application\views\template/side-bar.php
+INFO - 2026-04-13 16:27:16 --> File loaded: C:\laragon\www\hr\application\views\template/new_header_and_sidebar.php
+INFO - 2026-04-13 16:27:16 --> File loaded: C:\laragon\www\hr\application\views\templateo/orders_emp.php
+INFO - 2026-04-13 16:27:16 --> File loaded: C:\laragon\www\hr\application\views\template/new_footer.php
+INFO - 2026-04-13 16:27:16 --> Final output sent to browser
+DEBUG - 2026-04-13 16:27:16 --> Total execution time: 0.1414
+INFO - 2026-04-13 13:27:16 --> Config Class Initialized
+INFO - 2026-04-13 13:27:16 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:27:16 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:27:16 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:27:16 --> URI Class Initialized
+INFO - 2026-04-13 13:27:16 --> Router Class Initialized
+INFO - 2026-04-13 13:27:16 --> Output Class Initialized
+INFO - 2026-04-13 13:27:16 --> Security Class Initialized
+DEBUG - 2026-04-13 13:27:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:27:16 --> Input Class Initialized
+INFO - 2026-04-13 13:27:16 --> Language Class Initialized
+INFO - 2026-04-13 13:27:16 --> Loader Class Initialized
+INFO - 2026-04-13 13:27:16 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:27:16 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:27:16 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:27:16 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:27:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:27:16 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:27:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:27:16 --> Pagination Class Initialized
+INFO - 2026-04-13 13:27:16 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:27:16 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:27:16 --> Model "user_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:27:16 --> Controller Class Initialized
+INFO - 2026-04-13 16:27:16 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:27:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:27:16 --> Final output sent to browser
+DEBUG - 2026-04-13 16:27:16 --> Total execution time: 0.1125
+INFO - 2026-04-13 13:27:16 --> Config Class Initialized
+INFO - 2026-04-13 13:27:16 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:27:16 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:27:16 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:27:16 --> URI Class Initialized
+INFO - 2026-04-13 13:27:16 --> Router Class Initialized
+INFO - 2026-04-13 13:27:16 --> Output Class Initialized
+INFO - 2026-04-13 13:27:16 --> Security Class Initialized
+DEBUG - 2026-04-13 13:27:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:27:16 --> Input Class Initialized
+INFO - 2026-04-13 13:27:16 --> Language Class Initialized
+INFO - 2026-04-13 13:27:16 --> Loader Class Initialized
+INFO - 2026-04-13 13:27:16 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:27:16 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:27:16 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:27:16 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:27:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:27:16 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:27:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:27:16 --> Pagination Class Initialized
+INFO - 2026-04-13 13:27:16 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:27:16 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:27:16 --> Model "user_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:27:16 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:27:16 --> Controller Class Initialized
+INFO - 2026-04-13 16:27:16 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:27:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:27:16 --> Final output sent to browser
+DEBUG - 2026-04-13 16:27:16 --> Total execution time: 0.1282
+INFO - 2026-04-13 13:28:42 --> Config Class Initialized
+INFO - 2026-04-13 13:28:42 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:28:42 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:28:42 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:28:42 --> URI Class Initialized
+INFO - 2026-04-13 13:28:42 --> Router Class Initialized
+INFO - 2026-04-13 13:28:42 --> Output Class Initialized
+INFO - 2026-04-13 13:28:42 --> Security Class Initialized
+DEBUG - 2026-04-13 13:28:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:28:42 --> Input Class Initialized
+INFO - 2026-04-13 13:28:42 --> Language Class Initialized
+INFO - 2026-04-13 13:28:42 --> Loader Class Initialized
+INFO - 2026-04-13 13:28:42 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:28:42 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:28:42 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:28:42 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:28:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:28:42 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:28:42 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:28:42 --> Pagination Class Initialized
+INFO - 2026-04-13 13:28:42 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:28:42 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:28:42 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:28:42 --> Model "user_model" initialized
+INFO - 2026-04-13 13:28:42 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:28:42 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:28:42 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:28:42 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:28:42 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:28:42 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:28:42 --> Controller Class Initialized
+INFO - 2026-04-13 16:28:42 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:28:42 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:28:42 --> File loaded: C:\laragon\www\hr\application\views\template/top-bar.php
+INFO - 2026-04-13 16:28:42 --> File loaded: C:\laragon\www\hr\application\views\template/side-bar.php
+INFO - 2026-04-13 16:28:42 --> File loaded: C:\laragon\www\hr\application\views\template/new_header_and_sidebar.php
+INFO - 2026-04-13 16:28:42 --> File loaded: C:\laragon\www\hr\application\views\templateo/orders_emp.php
+INFO - 2026-04-13 16:28:42 --> File loaded: C:\laragon\www\hr\application\views\template/new_footer.php
+INFO - 2026-04-13 16:28:42 --> Final output sent to browser
+DEBUG - 2026-04-13 16:28:42 --> Total execution time: 0.1432
+INFO - 2026-04-13 13:28:43 --> Config Class Initialized
+INFO - 2026-04-13 13:28:43 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:28:43 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:28:43 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:28:43 --> URI Class Initialized
+INFO - 2026-04-13 13:28:43 --> Router Class Initialized
+INFO - 2026-04-13 13:28:43 --> Output Class Initialized
+INFO - 2026-04-13 13:28:43 --> Security Class Initialized
+DEBUG - 2026-04-13 13:28:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:28:43 --> Input Class Initialized
+INFO - 2026-04-13 13:28:43 --> Language Class Initialized
+INFO - 2026-04-13 13:28:43 --> Loader Class Initialized
+INFO - 2026-04-13 13:28:43 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:28:43 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:28:43 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:28:43 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:28:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:28:43 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:28:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:28:43 --> Pagination Class Initialized
+INFO - 2026-04-13 13:28:43 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:28:43 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:28:43 --> Model "user_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:28:43 --> Controller Class Initialized
+INFO - 2026-04-13 16:28:43 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:28:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:28:43 --> Final output sent to browser
+DEBUG - 2026-04-13 16:28:43 --> Total execution time: 0.1423
+INFO - 2026-04-13 13:28:43 --> Config Class Initialized
+INFO - 2026-04-13 13:28:43 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:28:43 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:28:43 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:28:43 --> URI Class Initialized
+INFO - 2026-04-13 13:28:43 --> Router Class Initialized
+INFO - 2026-04-13 13:28:43 --> Output Class Initialized
+INFO - 2026-04-13 13:28:43 --> Security Class Initialized
+DEBUG - 2026-04-13 13:28:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:28:43 --> Input Class Initialized
+INFO - 2026-04-13 13:28:43 --> Language Class Initialized
+INFO - 2026-04-13 13:28:43 --> Loader Class Initialized
+INFO - 2026-04-13 13:28:43 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:28:43 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:28:43 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:28:43 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:28:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:28:43 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:28:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:28:43 --> Pagination Class Initialized
+INFO - 2026-04-13 13:28:43 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:28:43 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:28:43 --> Model "user_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:28:43 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:28:43 --> Controller Class Initialized
+INFO - 2026-04-13 16:28:43 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:28:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:28:43 --> Final output sent to browser
+DEBUG - 2026-04-13 16:28:43 --> Total execution time: 0.1423
+INFO - 2026-04-13 13:32:26 --> Config Class Initialized
+INFO - 2026-04-13 13:32:26 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:32:26 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:32:26 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:32:26 --> URI Class Initialized
+INFO - 2026-04-13 13:32:26 --> Router Class Initialized
+INFO - 2026-04-13 13:32:26 --> Output Class Initialized
+INFO - 2026-04-13 13:32:26 --> Security Class Initialized
+DEBUG - 2026-04-13 13:32:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:32:26 --> Input Class Initialized
+INFO - 2026-04-13 13:32:26 --> Language Class Initialized
+INFO - 2026-04-13 13:32:26 --> Loader Class Initialized
+INFO - 2026-04-13 13:32:26 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:32:26 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:32:26 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:32:26 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:32:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:32:26 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:32:26 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:32:26 --> Pagination Class Initialized
+INFO - 2026-04-13 13:32:26 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:32:26 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:32:26 --> Model "user_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:32:26 --> Controller Class Initialized
+INFO - 2026-04-13 16:32:26 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:32:26 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:32:26 --> File loaded: C:\laragon\www\hr\application\views\templateo/orders_emp.php
+INFO - 2026-04-13 16:32:26 --> Final output sent to browser
+DEBUG - 2026-04-13 16:32:26 --> Total execution time: 0.1332
+INFO - 2026-04-13 13:32:26 --> Config Class Initialized
+INFO - 2026-04-13 13:32:26 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:32:26 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:32:26 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:32:26 --> URI Class Initialized
+INFO - 2026-04-13 13:32:26 --> Router Class Initialized
+INFO - 2026-04-13 13:32:26 --> Output Class Initialized
+INFO - 2026-04-13 13:32:26 --> Security Class Initialized
+DEBUG - 2026-04-13 13:32:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:32:26 --> Input Class Initialized
+INFO - 2026-04-13 13:32:26 --> Language Class Initialized
+INFO - 2026-04-13 13:32:26 --> Loader Class Initialized
+INFO - 2026-04-13 13:32:26 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:32:26 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:32:26 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:32:26 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:32:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:32:26 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:32:26 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:32:26 --> Pagination Class Initialized
+INFO - 2026-04-13 13:32:26 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:32:26 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:32:26 --> Model "user_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:32:26 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:32:26 --> Controller Class Initialized
+INFO - 2026-04-13 16:32:26 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:32:26 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:32:26 --> Final output sent to browser
+DEBUG - 2026-04-13 16:32:26 --> Total execution time: 0.1232
+INFO - 2026-04-13 13:32:27 --> Config Class Initialized
+INFO - 2026-04-13 13:32:27 --> Hooks Class Initialized
+DEBUG - 2026-04-13 13:32:27 --> UTF-8 Support Enabled
+INFO - 2026-04-13 13:32:27 --> Utf8 Class Initialized
+INFO - 2026-04-13 13:32:27 --> URI Class Initialized
+INFO - 2026-04-13 13:32:27 --> Router Class Initialized
+INFO - 2026-04-13 13:32:27 --> Output Class Initialized
+INFO - 2026-04-13 13:32:27 --> Security Class Initialized
+DEBUG - 2026-04-13 13:32:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-04-13 13:32:27 --> Input Class Initialized
+INFO - 2026-04-13 13:32:27 --> Language Class Initialized
+INFO - 2026-04-13 13:32:27 --> Loader Class Initialized
+INFO - 2026-04-13 13:32:27 --> Helper loaded: url_helper
+INFO - 2026-04-13 13:32:27 --> Helper loaded: form_helper
+INFO - 2026-04-13 13:32:27 --> Helper loaded: text_helper
+INFO - 2026-04-13 13:32:27 --> Form Validation Class Initialized
+DEBUG - 2026-04-13 13:32:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2026-04-13 13:32:27 --> Session: Class initialized using 'files' driver.
+INFO - 2026-04-13 13:32:27 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2026-04-13 13:32:27 --> Pagination Class Initialized
+INFO - 2026-04-13 13:32:27 --> Database Driver Class Initialized
+INFO - 2026-04-13 13:32:27 --> Model "hr_model" initialized
+INFO - 2026-04-13 13:32:27 --> Model "hr_model2" initialized
+INFO - 2026-04-13 13:32:27 --> Model "user_model" initialized
+INFO - 2026-04-13 13:32:27 --> Model "Leader_salaries_report_model" initialized
+INFO - 2026-04-13 13:32:27 --> Model "Project_cost_report_model" initialized
+INFO - 2026-04-13 13:32:27 --> Model "Annual_incentives_model" initialized
+INFO - 2026-04-13 13:32:27 --> Model "Organizational_structure_model" initialized
+INFO - 2026-04-13 13:32:27 --> Model "Annual_evaluation_model" initialized
+INFO - 2026-04-13 13:32:27 --> Model "Annual_evaluation_criteria_admin_model" initialized
+INFO - 2026-04-13 13:32:27 --> Controller Class Initialized
+INFO - 2026-04-13 16:32:27 --> Helper loaded: html_helper
+DEBUG - 2026-04-13 16:32:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2026-04-13 16:32:27 --> Final output sent to browser
+DEBUG - 2026-04-13 16:32:27 --> Total execution time: 0.1454

@@ -16,6 +16,6 @@
 <body>
   <section class="home">
     <div class="container">
-      <?php $this->load->view('components/top-bar'); ?>
-      <?php $this->load->view('components/right-nav-bar'); ?>
-      <div class="content col-12 col-md-9">
+       <?php $this->load->view('template/top-bar'); ?>
+       <?php $this->load->view('template/side-bar'); ?>
+    <div class="content col-12 col-md-9">

@@ -1,0 +1,212 @@
+/* =====================================================
+   General link styles (used for logout, menu items, etc.)
+   ===================================================== */
+.link {
+  color: #6C757D;
+  text-decoration: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 6px;
+  transition: all 0.5s ease 0s;
+}
+.link:hover {
+  color: #D3790D;
+  transition: all 0.5s ease 0s;
+}
+.link.selected {
+  background-color: #D3790D;
+  color: #fff;
+}
+.link.selected:hover {
+  background-color: #ABB5BE;
+  color: #343A40;
+}
+.link.disabled {
+  color: #ADB5BD !important;
+  cursor: inherit;
+}
+.link.hex {
+  padding: 0 30px;
+  min-height: 38px;
+}
+
+/* =====================================================
+   Navbar main structure
+   ===================================================== */
+.navbar {
+  min-height: 48px;
+  margin-bottom: 25px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navbar .box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Navbar links (with hexagonal background images) */
+.navbar .link {
+  height: 48px;
+  background-image: url("../images/nav_bg.png");
+  background-repeat: repeat-x;
+  background-size: auto 48px;
+  padding: 0;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 20px;
+  border-radius: 0;
+  color: #8A8AA3;
+}
+
+.navbar .link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -18px;
+  width: 20px;
+  height: 48px;
+  background-image: url("../images/nav_r.png");
+  background-size: 100% 100%;
+}
+
+.navbar .link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18px;
+  width: 20px;
+  height: 48px;
+  background-image: url("../images/nav_l.png");
+  background-size: 100% 100%;
+}
+
+.navbar .link img {
+  width: auto;
+  height: 28px;
+}
+
+.navbar .link ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .link ul li {
+  padding: 0;
+}
+
+.navbar .link ul li a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: none;
+  outline: none;
+  margin: 0px 4px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 50px;
+}
+
+.navbar .link ul li a:hover {
+  color: #F29220;
+}
+
+/* Welcome user section inside navbar link */
+.navbar .link .welcom {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  align-items: center;
+  padding: 0 0 0 3px;
+}
+
+.navbar .link .welcom img {
+  margin: 0 -10px 0 10px;
+  width: 40px;
+  height: 37px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+}
+
+.navbar a.links {
+  display: flex;
+  text-decoration: none;
+  outline: none;
+}
+
+.navbar a.links img {
+  width: auto;
+  height: 48px;
+  margin: 0 3px;
+}
+
+/* =====================================================
+   Icon circles (gear, bell, info) inside navbar
+   ===================================================== */
+.navbar .icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar .icon-circle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: inherit;
+}
+.navbar .icon-circle i {
+  font-size: 1.1rem;
+}
+
+/* =====================================================
+   Active state for top requisition links (طلباتي الوظيفية etc.)
+   ===================================================== */
+.navbar .link-menu.nav-top-triple ul {
+  flex-wrap: wrap;
+  gap: 0.15rem 0.35rem;
+  align-items: center;
+}
+.navbar .link-menu.nav-top-triple ul li a.active {
+  color: #f29220;
+  font-weight: 700;
+  background: rgba(242, 146, 32, 0.18);
+}
+
+/* =====================================================
+   Responsive behavior (max-width: 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar .link img {
+    height: 22px;
+  }
+  .navbar .link {
+    margin: 0 16px;
+  }
+  .navbar .box-welcom {
+    display: none !important;
+  }
+  .navbar .link-menu {
+    display: none;
+  }
+}

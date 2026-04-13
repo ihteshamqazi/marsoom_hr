@@ -1,0 +1,123 @@
+
+@media (max-width: 769px) {
+  
+  .login .container .block .login-slider .item .des .cover{
+    padding: 20% 25px 0;
+}
+.login .container .block .login-slider .item .des{
+  bottom: 60px;
+  left: 15px;
+  right: 15px;
+}
+.login .container .block .login-slider .item .des h3{
+  font-size: 24px;
+  line-height: 30px;
+}
+.login .container .block .login-slider .item .des p{
+  font-size: 20px;
+}
+.owl-dots button{
+  width: 50px;
+}
+/*  */
+.home {
+    padding: 25px 0;
+}
+.fast-link a{
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.navbar {
+    padding: 0;
+}
+.navbar .link img {
+    height: 22px;
+}
+
+.navbar-not-menu-white{
+    .link{
+        margin: 0 0 !important;
+        min-width: 36px;
+    }
+   .welcom{
+    font-size: 0; 
+    display: none !important;
+   }
+}
+
+.navbar-not-menu{
+    .link{
+        margin: 0 0 !important;
+        min-width: 36px;
+    }
+   .welcom{
+    font-size: 0; 
+    display: none !important;
+   }
+}
+
+
+.navbar-not-menu{
+    .link{
+        margin: 0 0 !important;
+        min-width: 36px;
+    }
+   .welcom{
+    font-size: 0; 
+    display: none !important;
+   }
+}
+
+
+.navbar{
+    .link{
+        margin: 0 16px;
+    }
+    .box-welcom{
+        display: none !important;
+    }
+    .link-menu{
+        display: none;
+    }
+}
+
+/*  */
+.home-icons .hex {
+    width: 200px;
+    height: 200px;
+    max-width: 50%;
+    padding: 20px ;
+    margin: 0 0 40px;
+}
+.hex-content .icon {
+    width: 80px;
+    height: 80px;
+}
+.hex-content h3 {
+    font-size: 16px;
+}
+
+
+
+
+
+
+} /******* PHONE ********/
+ 
+
+
+/**********************************************************/
+
+@media (max-width: 769px) {}
+
+/*
+background-color: rgba(80,104,140,0.5);
+transition: all 0.5s ease 0s;
+transform: scale(1.2);
+
+*/

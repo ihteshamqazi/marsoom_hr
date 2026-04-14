@@ -16,12 +16,17 @@ class AnnualIncentives extends CI_Controller
     public function index(){
         $data['title'] = 'نظام الحوافز السنوية';
         $data['rows']  = $this->aim->list_batches();
-        $this->load->view('annual_incentives/index', $data);
+            $this->load->view('template/new_header_and_sidebar', $data ?? []);
+            $this->load->view('annual_incentives/index', $data);
+            $this->load->view('template/new_footer');
     }
 
     public function create(){
         $data['title'] = 'إنشاء دفعة حوافز سنوية';
-        $this->load->view('annual_incentives/create', $data);
+
+            $this->load->view('template/new_header_and_sidebar', $data ?? []);
+            $this->load->view('annual_incentives/create', $data);
+            $this->load->view('template/new_footer');
     }
 
     public function store_setup(){
@@ -65,7 +70,10 @@ class AnnualIncentives extends CI_Controller
         $data['title'] = 'اختيار الموظفين - '.$batch['batch_name'].' ('.$batch['batch_year'].')';
         $data['batch'] = $batch;
         $data['selected'] = $this->aim->get_batch_employees($batch_id);
+       
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('annual_incentives/employees', $data);
+        $this->load->view('template/new_footer');
     }
 
     public function search_emp1(){
@@ -183,7 +191,9 @@ class AnnualIncentives extends CI_Controller
     $data['batch'] = $batch;
     $data['rows']  = $calc_rows;
 
-    $this->load->view('annual_incentives/calc', $data);
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
+        $this->load->view('annual_incentives/calc', $data);
+        $this->load->view('template/new_footer');
 }
 
 
@@ -277,7 +287,9 @@ class AnnualIncentives extends CI_Controller
     $data['spent_f'] = $spent;
     $data['remaining_f'] = $remaining;
 
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
     $this->load->view('annual_incentives/view', $data);
+    $this->load->view('template/new_footer');
 }
 
 
@@ -303,7 +315,10 @@ class AnnualIncentives extends CI_Controller
 
     $data['title'] = 'تعديل إعدادات الدفعة';
     $data['batch'] = $batch;
+
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
     $this->load->view('annual_incentives/edit_settings', $data);
+    $this->load->view('template/new_footer');
 }
 
  public function update_settings()
@@ -464,7 +479,9 @@ public function print_view($batch_id){
     $data['batch'] = $batch;
     $data['rows']  = $rows;
 
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
     $this->load->view('annual_incentives/print', $data);
+    $this->load->view('template/new_footer');
 }
 
 public function reset_calculations()

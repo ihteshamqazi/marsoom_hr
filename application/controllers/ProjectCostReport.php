@@ -24,7 +24,9 @@ class ProjectCostReport extends CI_Controller
 
         $data['projects'] = $this->cost->get_projects_summary($month);
 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('project_cost_summary_view', $data);
+        $this->load->view('template/new_footer');
     }
 
     /** تفاصيل مشروع */
@@ -44,7 +46,9 @@ class ProjectCostReport extends CI_Controller
         $data['rows']       = $this->cost->get_project_employees_cost($project_id, $month);
         $data['totals']     = $this->cost->calc_totals($data['rows'], $data['project']['commission_rate'] ?? 0);
 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('project_cost_project_view', $data);
+        $this->load->view('template/new_footer');
     }
 
     /** تصدير CSV للملخص */

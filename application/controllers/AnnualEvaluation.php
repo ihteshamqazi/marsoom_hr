@@ -81,7 +81,10 @@ $data['total_max'] = $total_max;
 
 
     // ✅ تحميل الفيو
+           
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
     $this->load->view('annual_eval/self_form', $data);
+    $this->load->view('template/new_footer');
 }
 
 public function save()
@@ -163,7 +166,10 @@ $criteria = $this->ev->get_form_criteria($form_type);
     ];
 
     // 5) عرض قالب الطباعة
+           
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
     $this->load->view('annual_eval/employee_eval_a4_v3_new', $data);
+    $this->load->view('template/new_footer');
 }
 
 

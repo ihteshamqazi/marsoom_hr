@@ -17,7 +17,10 @@ class OrgStructureEditor extends CI_Controller
     public function index()
     {
         $data['title'] = 'تعديل الهيكل التنظيمي (سحب وإفلات)';
-        $this->load->view('org_structure_editor_view', $data);
+
+            $this->load->view('template/new_header_and_sidebar', $data ?? []);
+            $this->load->view('org_structure_editor_view', $data);
+            $this->load->view('template/new_footer');
     }
 
     // تحميل بيانات الشجرة
@@ -86,7 +89,10 @@ class OrgStructureEditor extends CI_Controller
     {
         $data['title'] = 'طباعة الهيكل التنظيمي';
         $data['tree_json'] = json_encode($this->org->get_tree_for_jstree(), JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+         
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('org_structure_print_view', $data);
+        $this->load->view('template/new_footer');
     }
 
     // جلب قائمة المدراء/المشرفين للاختيار (بحث)

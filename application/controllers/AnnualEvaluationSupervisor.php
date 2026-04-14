@@ -32,7 +32,9 @@ class AnnualEvaluationSupervisor extends CI_Controller
     ];
 
     // ✅ فقط قائمة الفريق
-    $this->load->view('annual_eval/supervisor_list', $data);
+         $this->load->view('template/new_header_and_sidebar', $data ?? []);
+         $this->load->view('annual_eval/supervisor_list', $data);
+         $this->load->view('template/new_footer');
 }
 
  
@@ -106,7 +108,9 @@ $breakdown = $this->ev->decode_breakdown($sup_eval);
 'total_max' => $total_max,
 ];
 
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);
     $this->load->view('annual_eval/supervisor_form', $data);
+    $this->load->view('template/new_footer');
 }
     
 

@@ -34,7 +34,10 @@ class LeaderSalariesReport extends CI_Controller
         $data['groups']   = $this->leaders->get_grouped_leaders_report($filters);
         $data['professions'] = $this->leaders->get_professions_list();
 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('leader_salaries_report_view', $data);
+        $this->load->view('template/new_footer');
+
     }
 
     /**
@@ -59,8 +62,10 @@ class LeaderSalariesReport extends CI_Controller
 
         $data['has_n3']    = $this->leaders->has_subordinates_n3($manager_id);
         $data['groups_n3'] = $this->leaders->get_grouped_subordinates_n3_report($manager_id, $filters);
-
+      
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('leader_salaries_details_view', $data);
+        $this->load->view('template/new_footer');
     }
 
     /**
@@ -89,7 +94,9 @@ class LeaderSalariesReport extends CI_Controller
         $data['n4_others']     = $this->leaders->get_grouped_n4_by_n3_others_report($n3_id, $filters);
         $data['n4_collectors'] = $this->leaders->get_grouped_n4_by_n3_collectors_report($n3_id, $filters);
 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('leader_salaries_subdetails_view', $data);
+        $this->load->view('template/new_footer');
     }
 
     /* =============================

@@ -26,7 +26,10 @@ class AnnualEvaluationImports extends CI_Controller
             'year'  => $year,
             'flash' => $this->session->flashdata('msg')
         ];
+
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('annual_eval/imports_csv', $data);
+        $this->load->view('template/new_footer');
     }
 
     /* ========= أدوات CSV ========= */

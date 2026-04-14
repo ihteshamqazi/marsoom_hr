@@ -45,6 +45,11 @@
 	z-index: 6;
 }
 
+.top-actions
+{
+	border:2px solid red;
+	display:none !important;
+}
 /* =====================================================
    General link styles (used for logout, menu items, etc.)
    ===================================================== */

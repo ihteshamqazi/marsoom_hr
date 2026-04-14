@@ -105,7 +105,9 @@ public function user_report101()
         
         // Load the view with the new data
         // Using your setview function
+        $this->load->view('template/new_header_and_sidebar');
         $this->load->view('templateo/user_report101', $data);
+        $this->load->view('template/new_footer');
         
         // Or load directly if setview is not appropriate
         // $this->load->view('templateo/header');

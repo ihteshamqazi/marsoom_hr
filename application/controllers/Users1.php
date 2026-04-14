@@ -10329,9 +10329,9 @@ public function orders_emp_res() {
               redirect('users/login');
             }else{
 
+                 $this->load->view('template/new_header_and_sidebar');
                  $this->load->view('templateo/profile_view');
-
-                  
+                 $this->load->view('template/new_footer'); 
 
             }
         }
@@ -14060,7 +14060,9 @@ public function send_experience_certificate() {
     public function new_insurance_request() {
         if (!$this->session->userdata('logged_in')) redirect('users/login');
     //    
+          $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('templateo/insurance_form'); // The Attractive View
+        $this->load->view('template/new_footer');
    //     
     }
 public function modify_staff_record($id) {

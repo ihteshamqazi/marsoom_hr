@@ -660,11 +660,10 @@ public function get_personal_details()
       function main1(){ 
         
 $data['employee_name'] = $this->session->userdata('name');
-$this->load->view('templateo/main1', $data);
-             $this->load->view('templateo/main1');   
 
-
-          
+            $this->load->view('template/new_header_and_sidebar', $data ?? []);
+            $this->load->view('templateo/main1', $data);
+            $this->load->view('template/new_footer', $data ?? []);
           
       }
 // In Users2.php

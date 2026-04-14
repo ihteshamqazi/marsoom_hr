@@ -265,7 +265,10 @@ public function user_report101()
                          $this->form_validation->set_rules('search','search','required');
                         if($this->form_validation->run() === FALSE){                       
                         //  $this->load->view('templateo/header');
+
+                          $this->load->view('template/new_header_and_sidebar', $data ?? []);
                           $this->load->view('templateo/employee_evaluation', $data);
+                            $this->load->view('template/new_footer');
                      
                       
                     } else {
@@ -278,8 +281,9 @@ public function user_report101()
                            // $data['get_portfolio_for_edit'] = $this->user_model->get_portfolio_for_edit555($emp_id); 
                            
 
-                        //  $this->load->view('templateo/header',$data);
+                         $this->load->view('template/new_header_and_sidebar', $data ?? []);
                           $this->load->view('templateo/employee_evaluation', $data);
+                            $this->load->view('template/new_footer');
 
                           //  $data['cuntt4sss']=$this->user_model->cuntt4sss($s,$s1);
 

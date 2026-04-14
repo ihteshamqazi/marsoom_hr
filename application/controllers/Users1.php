@@ -5647,7 +5647,11 @@ $this->load->view('template/new_footer');
 
     // 3) التحقق من الصلاحية
     if (in_array($username, $allowed_users)) {
+
+        
+        $this->load->view('template/new_header_and_sidebar');
         $this->load->view('templateo/main_salary');
+        $this->load->view('template/new_footer');
     } else {
         // إعادة توجيه أو منع
         redirect('users/login');
@@ -6383,7 +6387,13 @@ public function update_leave_balance()
     $rows = $this->hr_model->get_all_org_paths();
     if (!$rows) {
         $data = ['head' => $head, 'levels' => [], 'edges' => [], 'map' => [], 'error' => 'لا توجد بيانات في organizational_structure.'];
-        return $this->load->view('templateo/org_pyramid', $data);
+
+
+         $this->load->view('template/new_header_and_sidebar', $data);
+         $this->load->view('templateo/org_pyramid', $data);
+         $this->load->view('template/new_footer');   
+
+         return;
     }
 
     // لو ما انرسل head نختار أول n1 موجود
@@ -8751,7 +8761,9 @@ public function salary_sheets_list_ramadan()
     $data['sheets'] = $this->hr_model->get_all_salary_sheets_full(); 
     $data['page_title'] = 'أرشيف مسيرات الرواتب';
     
+    $this->load->view('template/new_header_and_sidebar', $data ?? []);  
     $this->load->view('ramadan/salary_sheets_kanban_ramadan', $data);
+    $this->load->view('template/new_footer');
 }
 
 public function delete_salary_sheet()
@@ -13578,7 +13590,9 @@ public function print_mandate($id)
     public function labor_case_request() {
         if (!$this->session->userdata('logged_in')) redirect('users/login');
      //   
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);  
         $this->load->view('templateo/labor_case_form');
+        $this->load->view('template/new_footer');
     //    
     }
 

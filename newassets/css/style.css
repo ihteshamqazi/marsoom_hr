@@ -535,6 +535,8 @@ section {
   flex-wrap: wrap;
   align-content: flex-start;
   align-items: flex-start;
+  background-color: red;
+  padding:5px;
 }
 
 .navbar {

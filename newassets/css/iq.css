@@ -1,3 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ 
+.container-outer {
+    background: linear-gradient(180deg, #181A3B 0%, #F1F1FA 100%);
+    padding: 25px 15px;
+    min-height: 100vh;
+    position: relative;
+}
+ 
+.content-wrapper {
+ 
+    padding:5px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;  /* small margin between sidebar and content */
+    align-items: flex-start;
+}
+ 
+.container-sidebar {
+    order: 1;               
+    width: 300px;          /* fixed width for sidebar */
+    flex-shrink: 0;         
+}
+
+/* Content area on the RIGHT side */
+.container-inner { 
+    background-color: #F1F1FA;    
+    border-radius: 10px;   
+    order: 2;              /* appears second (right) */
+    flex: 1;               /* takes remaining width */
+    
+    padding: 15px;
+    position: relative;
+    z-index: 6;
+}
+
 /* =====================================================
    General link styles (used for logout, menu items, etc.)
    ===================================================== */
@@ -125,7 +165,7 @@
   color: #F29220;
 }
 
-/* Welcome user section inside navbar link */
+ 
 .navbar .link .welcom {
   display: flex;
   flex-wrap: wrap;

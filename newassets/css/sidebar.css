@@ -1,0 +1,71 @@
+/* navbar.css - Sidebar styles only */
+
+.sidebar {
+  border-radius: 10px;
+  padding: 25px;
+  background: #fff;
+  min-height: auto;
+  margin: 0 0 20px 15px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 300px !important;
+    min-height: auto;
+    align-self: flex-start;
+  }
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar ul li {
+  padding: 3px 0;
+  display: flex;
+  width: 100%;
+}
+
+.sidebar ul li a {
+  width: 100%;
+  transition: all 0.5s ease 0s;
+  min-height: 52px;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  color: #5C5E8A;
+  text-decoration: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-image: url("../images/hover.png");
+  background-size: 100% 100%;
+  color: #181A3B;
+  transition: all 0.5s ease 0s;
+  padding: 0 15px 0 0;
+}
+
+.sidebar ul li a i {
+  width: 30px;
+  height: auto;
+  margin: 0 0 0 7px;
+}
+
+.sidebar ul li a i img {
+  max-width: 24px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}

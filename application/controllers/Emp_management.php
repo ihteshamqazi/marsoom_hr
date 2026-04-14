@@ -14,7 +14,9 @@ class Emp_management extends CI_Controller {
 
     public function index() {
         $data['employees'] = $this->emp_model->get_all_employees();
+         $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('manage_employees', $data);
+        $this->load->view('template/new_footer');
     }
 
     public function get_record() {
@@ -105,7 +107,9 @@ class Emp_management extends CI_Controller {
 
     public function orders_management() {
         $data['orders'] = $this->emp_model->get_all_orders();
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('manage_orders', $data); 
+        $this->load->view('template/new_footer');
     }
 
     public function get_order() {
@@ -167,7 +171,9 @@ class Emp_management extends CI_Controller {
 
     public function approval_workflow() {
         $data['workflows'] = $this->emp_model->get_all_workflows();
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('manage_approval_workflow', $data);
+        $this->load->view('template/new_footer');
     }
 
     public function get_workflow() {
@@ -227,7 +233,9 @@ class Emp_management extends CI_Controller {
 
     public function attendance_logs() {
         // We DO NOT fetch data here. The view loads instantly and AJAX fetches the data.
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('manage_attendance');
+        $this->load->view('template/new_footer');
     }
 
     public function fetch_attendance_ajax() {
@@ -353,7 +361,9 @@ class Emp_management extends CI_Controller {
     // ========================================================
 
     public function mandate_requests() {
+       $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('manage_mandate_requests');
+        $this->load->view('template/new_footer');
     }
 
     public function fetch_mandate_ajax() {
@@ -472,12 +482,42 @@ class Emp_management extends CI_Controller {
     // ========================================================
 
     // ---- VIEWS ----
-    public function v_attendance_summary() { $this->load->view('v_attendance_summary'); }
-    public function v_payroll_process() { $this->load->view('v_payroll_process'); }
-    public function v_discounts() { $this->load->view('v_discounts'); }
-    public function v_reparations() { $this->load->view('v_reparations'); }
-    public function v_employee_violations() { $this->load->view('v_employee_violations'); }
-    public function v_employee_leave_balances() { $this->load->view('v_employee_leave_balances'); }
+            public function v_attendance_summary() { 
+                $this->load->view('template/new_header_and_sidebar', $data ?? []); 
+                $this->load->view('v_attendance_summary'); 
+                $this->load->view('template/new_footer');
+            }
+
+            public function v_payroll_process() { 
+                $this->load->view('template/new_header_and_sidebar', $data ?? []); 
+                $this->load->view('v_payroll_process');
+                $this->load->view('template/new_footer');
+            }
+
+            public function v_discounts() { 
+                $this->load->view('template/new_header_and_sidebar', $data ?? []); 
+                $this->load->view('v_discounts');
+                $this->load->view('template/new_footer');
+            }
+
+            public function v_reparations() {                
+                $this->load->view('template/new_header_and_sidebar', $data ?? []);
+                $this->load->view('v_reparations'); 
+                $this->load->view('template/new_footer');
+            }
+            
+            public function v_employee_violations() { 
+                $this->load->view('template/new_header_and_sidebar', $data ?? []);
+                $this->load->view('v_employee_violations'); 
+                $this->load->view('template/new_footer');
+            }
+         
+            public function v_employee_leave_balances() {
+                
+                $this->load->view('template/new_header_and_sidebar', $data ?? []);
+                $this->load->view('v_employee_leave_balances');
+                $this->load->view('template/new_footer');
+            }
 
     // ---- AJAX DATATABLES FETCH ----
     private function _render_ajax_response($draw, $total, $filtered, $data) {
@@ -593,7 +633,9 @@ class Emp_management extends CI_Controller {
     // CONTROLLER METHODS FOR END OF SERVICE SETTLEMENTS
     // ========================================================
     public function v_end_of_service_settlements() { 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('v_end_of_service_settlements'); 
+        $this->load->view('template/new_footer');
     }
 
     public function dt_eos_settlements() {
@@ -630,7 +672,9 @@ class Emp_management extends CI_Controller {
     // CONTROLLER METHODS FOR RESIGNATION CLEARANCES
     // ========================================================
     public function v_resignation_clearances() { 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('v_resignation_clearances'); 
+        $this->load->view('template/new_footer');
     }
 
     public function dt_resignation_clearances() {
@@ -673,10 +717,26 @@ class Emp_management extends CI_Controller {
     // ========================================================
 
     // ---- VIEWS ----
-    public function v_insurance_discount() { $this->load->view('v_insurance_discount'); }
-    public function v_new_employees() { $this->load->view('v_new_employees'); }
-    public function v_stop_salary() { $this->load->view('v_stop_salary'); }
-    public function v_work_restrictions() { $this->load->view('v_work_restrictions'); }
+    public function v_insurance_discount() { 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
+        $this->load->view('v_insurance_discount'); 
+        $this->load->view('template/new_footer');
+    }
+    public function v_new_employees() { 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
+        $this->load->view('v_new_employees'); 
+        $this->load->view('template/new_footer');
+    }
+    public function v_stop_salary() { 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
+        $this->load->view('v_stop_salary'); 
+        $this->load->view('template/new_footer');
+    }
+    public function v_work_restrictions() { 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
+        $this->load->view('v_work_restrictions'); 
+        $this->load->view('template/new_footer');
+    }
 
     // ---- AJAX DATATABLES FETCH ----
     public function dt_insurance_discount() {
@@ -723,7 +783,9 @@ class Emp_management extends CI_Controller {
         $this->_render_ajax_response($this->input->post('draw'), $this->emp_model->count_work_restrictions(), $this->emp_model->count_filtered_work_restrictions(), $data);
     }
     public function v_orders_emp() { 
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('v_orders_emp'); 
+        $this->load->view('template/new_footer');
     }
 
     public function dt_orders_emp() {
@@ -761,7 +823,9 @@ class Emp_management extends CI_Controller {
         $this->_render_ajax_response($this->input->post('draw'), $this->emp_model->count_orders_emp(), $this->emp_model->count_filtered_orders_emp(), $data);
     }
     public function v_approval_workflow() { 
+         $this->load->view('template/new_header_and_sidebar', $data ?? []);
         $this->load->view('v_approval_workflow'); 
+        $this->load->view('template/new_footer');
     }
     public function dt_approval_workflow() {
         $list = $this->emp_model->get_dt_approval_workflow();

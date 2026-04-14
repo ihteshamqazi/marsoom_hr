@@ -31,7 +31,9 @@ class Ramadan extends CI_Controller {
         
         // If there are no employees, stop here to avoid errors
         if (empty($employees)) {
+            $this->load->view('template/new_header_and_sidebar', $data ?? []);
             $this->load->view('ramadan/m44_hr_ramadan', $data);
+            $this->load->view('template/new_footer');
             return;
         }
 
@@ -174,7 +176,10 @@ class Ramadan extends CI_Controller {
         $data['data_map'] = $data_map;
         
         // === THIS LINE IS THE ONLY DIFFERENCE! IT LOADS THE RAMADAN VIEW INSTEAD OF THE STANDARD ONE ===
-        $this->load->view('ramadan/m44_hr_ramadan', $data);
+
+          $this->load->view('template/new_header_and_sidebar', $data ?? []);
+          $this->load->view('ramadan/m44_hr_ramadan', $data);
+          $this->load->view('template/new_footer');
     }
     // --- Handle Bulk Action (Approve/Reject Multiple) ---
     public function bulk_action_remote_request() {
@@ -229,7 +234,10 @@ class Ramadan extends CI_Controller {
 
         $data['requests'] = $this->Ramadan_model->get_remote_requests($emp_id, $data['is_hr']);
 
-        $this->load->view('ramadan/remote_work_view', $data);
+        $this->load->view('template/new_header_and_sidebar', $data ?? []);
+        $this->load->view('ramadan/remote_work_view', $data ?? []);
+        $this->load->view('template/new_footer');
+
     }
 
     // --- Submit New Request ---
@@ -386,9 +394,12 @@ $data['unpaid_leave_map'] = $this->hr_model->get_unpaid_leave_days_for_employees
                     $data['stopped_salary_map'] = [];
                     $data['exemption_map'] = [];
                     $data['notes_map'] = [];
-                }
-
+                } 
+             
+                $this->load->view('template/new_header_and_sidebar', $data ?? []);
                 $this->load->view('ramadan/payroll_view101_ramadan', $data);
+                $this->load->view('template/new_footer');
+
             } else {
                 redirect('users/login');
             }

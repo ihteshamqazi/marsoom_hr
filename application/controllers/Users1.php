@@ -16859,9 +16859,9 @@ foreach ($all_mandate_requests as $mandate) {
       $this->form_validation->set_rules('username', 'Username', 'required');
       $this->form_validation->set_rules('password', 'Password', 'required');
       if($this->form_validation->run() === FALSE){    
-    $this->load->view('template/new_header_and_sidebar', $data ?? []);
+     
     $this->load->view('templateo/login1', $data ?? []);
-    $this->load->view('template/new_footer');   
+       
       } else {
         $username = $this->input->post('username');
         $password =MD5($this->input->post('password'));

@@ -9,9 +9,9 @@
 
 <div class="navbar col-12">
     <div class="box">
-        <button type="button" class="sidebar-toggle" id="sidebarToggle" aria-label="القائمة">
+        <!-- <button type="button" class="sidebar-toggle" id="sidebarToggle" aria-label="القائمة">
             <i class="bi bi-list"></i>
-        </button>
+        </button> -->
         <div class="link">
             <a href="<?= site_url('dashboard'); ?>">
                 <img src="<?= base_url('newassets/images/logo-dash.svg'); ?>" alt="">

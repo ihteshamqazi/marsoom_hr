@@ -56,12 +56,12 @@ if (date('m-d', strtotime($testDate)) == '01-01' && date('m', strtotime($testDat
     --vac:#1abc9c;    --half:#8e44ad;  --corr:#f39c12; --abs:#dc3545; --week:#6c757d;
     --holiday: #3498db;
 }
-body{
+/* body{
     font-family:'Tajawal',sans-serif;
     background:linear-gradient(135deg,var(--marsom-blue) 0%,#34495e 50%,var(--marsom-orange) 100%);
     background-size:400% 400%; animation:gradientAnimation 20s ease infinite;
     display:flex; justify-content:center; align-items:center; min-height:100vh; margin:0; padding:15px; position:relative; color:var(--text-light);
-}
+} */
 @keyframes gradientAnimation{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .particles{position:absolute; inset:0; overflow:hidden; z-index:0}
 .particle{position:absolute; background:rgba(255,140,0,.1); clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%); animation:float 25s infinite ease-in-out; opacity:0; filter:blur(2px)}
@@ -117,13 +117,13 @@ h2{font-weight:700;text-align:center;margin-bottom:12px;text-shadow:0 3px 6px rg
     <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
 </div>
 
-<div class="top-fixed-nav">
+<!-- <div class="top-fixed-nav">
     <button class="btn btn-secondary">مرحباً <?= html_escape($name) ?: 'ضيف' ?></button>
     <a href="<?= site_url('users/logout'); ?>" class="btn btn-secondary"><i class="fas fa-right-from-bracket me-2"></i> خروج</a>
     <a href="<?= site_url('users1/main_emp'); ?>" class="btn btn-secondary"><i class="fas fa-home"></i> الرئيسية</a>
-</div>
+</div> -->
 
-<div class="main-screen-container">
+<div class="main-screen-container_fazool">
     <h2>الحضور لـ: <span class="text-warning"><?= html_escape($target_name) ?></span></h2>
 
    <?php if ($is_hr_user || $is_manager || $is_abha_supervisor || $is_company_2_supervisor): ?>

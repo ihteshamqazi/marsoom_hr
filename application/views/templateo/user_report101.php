@@ -19,7 +19,7 @@
       --glass-shadow: rgba(0, 0, 0, 0.5);
       --card-bg: rgba(8, 34, 64, 0.92);
     }
-    body {
+    /* body {
       font-family: 'Tajawal', sans-serif;
       background: linear-gradient(135deg, var(--marsom-blue) 0%, #34495e 50%, var(--marsom-orange) 100%);
       background-attachment: fixed;
@@ -33,7 +33,7 @@
       padding: 40px 15px;
       position: relative;
       color: #ffffff;
-    }
+    } */
     @keyframes gradientAnimation {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }

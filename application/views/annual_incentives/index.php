@@ -45,6 +45,7 @@
     /* خلفية متحركة خفيفة */
     .bg-pattern{
       position:fixed; inset:0;
+      pointer-events: none;
       background-image:
         radial-gradient(circle at 10% 20%, rgba(255,140,0,.06) 0%, transparent 22%),
         radial-gradient(circle at 90% 80%, rgba(0,31,63,.06) 0%, transparent 22%),

@@ -21,10 +21,10 @@
             --glass-shadow: rgba(0, 0, 0, 0.5);
         }
 
-        body {
-            font-family: 'El Messiri', sans-serif; /* Default body font */
-            overflow: hidden; /* Prevent scrollbar from particle animation */
-            background: linear-gradient(135deg, var(--marsom-blue) 0%, #34495e 50%, var(--marsom-orange) 100%); /* Brand colors gradient */
+        /* body {
+            font-family: 'El Messiri', sans-serif; 
+            overflow: hidden; 
+            background: linear-gradient(135deg, var(--marsom-blue) 0%, #34495e 50%, var(--marsom-orange) 100%);             
             background-size: 400% 400%;
             animation: gradientAnimation 20s ease infinite;
             display: flex;
@@ -34,7 +34,7 @@
             margin: 0;
             padding: 15px;
             position: relative;
-        }
+        } */
 
         @keyframes gradientAnimation {
             0% { background-position: 0% 50%; }
@@ -136,6 +136,7 @@
             padding: 20px; /* More padding for larger buttons */
             display: flex;
             flex-direction: column;
+            color:#001f3f !important;
             align-items: center;
             justify-content: center;
             color: var(--text-light);
@@ -158,6 +159,7 @@
             margin-bottom: 15px; /* More space below icon */
             color: var(--text-light); /* Default icon color */
             transition: color 0.3s ease;
+            
         }
         .quick-action-button:hover i {
             color: var(--marsom-orange); /* Orange icon on hover */
@@ -232,7 +234,7 @@
 
     </div>
 
-    <div class="main-screen-container position-relative">
+    <div class="main-screen-container_fazool position-relative">
          
         <h2 class="text-center mb-5">الرواتب</h2>
 

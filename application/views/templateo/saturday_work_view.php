@@ -24,7 +24,7 @@
         color:var(--text-dark); /* Changed to dark text for content cards */
     }
     @keyframes grad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-    .particles{position:fixed;inset:0;overflow:hidden;z-index:-1}
+    .particles{position:fixed;inset:0;overflow:hidden;z-index:-1;pointer-events: none;}
     .particle{position:absolute;background:rgba(255,140,0,.1);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);animation:float 25s infinite ease-in-out;opacity:0;}
     @keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateY(-100vh) rotate(360deg);opacity:0}}
     .main-container{padding:30px 15px;z-index:1}
